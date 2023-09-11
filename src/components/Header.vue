@@ -1,17 +1,19 @@
-<script setup></script>
+<script setup>
+import {RouterLink} from 'vue-router'
+</script>
 <template>
     <header>
         <div class="container-menu">
             <div class="box-logo">
-                <a href="/"><h1>ABRIME</h1></a>
+                <RouterLink to="/"><h1>ABRIME</h1></RouterLink>
             </div>
             <div class="box-menu">
                 <nav>
                     <ul>
-                        <li><a href="/"><i class="ri-home-4-line"></i> Inicio</a></li>
-                        <li><a href="#">Categoria</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><RouterLink to="/"><i class="ri-home-4-line"></i> Inicio</RouterLink></li>
+                        <li><RouterLink to="/">Categoria</RouterLink></li>
+                        <li><RouterLink to="/about">Sobre</RouterLink></li>
+                        <li><RouterLink to="/">Contato</RouterLink></li>
                     </ul>
                 </nav>
             </div>
