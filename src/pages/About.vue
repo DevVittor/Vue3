@@ -3,6 +3,12 @@ document.title = 'About'
 
 </script>
 <template>
-    <h1>Sobre</h1>
+    <main>
+        <section>
+            <div class="">
+                <h1>Sobre</h1>
+            </div>
+        </section>
+    </main>
 </template>
 <style scoped></style>
