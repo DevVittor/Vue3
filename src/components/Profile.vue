@@ -49,31 +49,43 @@ onMounted(() => {
               eveniet, ipsam consequuntur esse iure voluptas quam eius ullam
             </p>
           </div>
-          <div class="flex justify-center items-center gap-3">
+          <div class="flex justify-center items-center gap-3 pt-[5px]">
             <nav>
               <ul class="flex items-center gap-3">
                 <li>
-                  <a class="text-[20px]" href="#" target="_blank"
+                  <a class="text-[24px]" href="#" target="_blank"
                     ><i class="ri-facebook-box-fill"></i
                   ></a>
                 </li>
                 <li>
-                  <a class="text-[20px]" href="#" target="_blank"
+                  <a class="text-[24px]" href="#" target="_blank"
                     ><i class="ri-instagram-line"></i
                   ></a>
                 </li>
                 <li>
-                  <a class="text-[20px]" href="#" target="_blank"
+                  <a class="text-[24px]" href="#" target="_blank"
                     ><i class="ri-twitter-x-fill"></i
                   ></a>
                 </li>
                 <li>
-                  <a class="text-[20px]" href="#" target="_blank"
+                  <a class="text-[24px]" href="#" target="_blank"
                     ><i class="ri-telegram-fill"></i
                   ></a>
                 </li>
               </ul>
             </nav>
+          </div>
+          <div class="flex justify-center items-center gap-3 pt-[5px]">
+            <button
+              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+            >
+              Serviços
+            </button>
+            <button
+              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+            >
+              Corpo
+            </button>
           </div>
         </div>
       </div>
