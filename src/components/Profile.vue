@@ -88,27 +88,30 @@ onMounted(() => {
             <button
               class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
-              Serviços
+              <i class="pr-1.5 text-white fa-solid fa-bell-concierge"></i
+              >Serviços
             </button>
             <button
               class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
-              Corpo
+              <i class="pr-1.5 text-white fa-solid fa-child-reaching"></i>Corpo
             </button>
             <button
               class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
-              Horários
+              <i class="pr-1.5 text-white fa-regular fa-calendar-days"></i
+              >Horários
             </button>
             <button
               class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
-              Local
+              <i class="pr-1.5 text-white fa-solid fa-map-pin"></i>Local
             </button>
             <button
               class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
-              Formas de Pagamento
+              <i class="pr-1.5 text-white fa-solid fa-money-check-dollar"></i
+              >Formas de Pagamento
             </button>
           </div>
         </div>
