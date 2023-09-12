@@ -1,32 +1,107 @@
 <script setup>
+import Card from './Card.vue';
+
 document.title = "Jéssica Gomes"
 </script>
 <template>
     <section>
         <div class="container-profile">
-            <div class="box-profile">
-                <div class="profile-name">
-                    <div class="box-name">
-                        <h2>Lorem ipsum dolor sit amet.</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quia iure commodi tempore a quasi, dicta sed, repudiandae nemo facere impedit ratione debitis inventore excepturi? Incidunt beatae cum nemo porro!</p>
-                        <div class="box-social">
-                            <nav>
-                                <ul>
-                                    <li><a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a></li>
-                                    <li><a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a></li>
-                                </ul>
-                            </nav>
-                        </div>
+            <div class="box-1">
+                <div class="box-profile">
+                    <div class="one">
+                        <div class="one-1"></div>
+                        <div class="one-2"></div>
+                    </div>
+                    <div class="two">
+                        <div class="two-1"></div>
+                        <div class="two-2"></div>
                     </div>
                 </div>
-                <div class="profile-map"></div>
-                <div class="profile-body"></div>
-                <div class="profile-services"></div>
-                <div class="profile-video"></div> 
+                <div class="tres">
+                    <div class="tres-1"></div>
+                </div>
             </div>
+            <div class="box-2">
+                <div class="tres">
+                    <div class="tres-4"></div>
+                </div>
+                <div class="box-profile2">
+                    <div class="one-3">
+                        <div class="one-4"></div>
+                        <div class="one-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-gallery">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
         </div>
     </section>
 </template>
@@ -35,57 +110,106 @@ document.title = "Jéssica Gomes"
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+.box-1{
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    width: auto;
+    gap: 5px;
+}
+.box-2{
+    display: flex;
+    align-items: flex-start;
+    height: auto;
+    width: auto;
+    gap: 5px;
 }
 .box-profile{
     display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    width:1000px;
-}
-.profile-name{
-    height: 250px;
-    width: 75%;
-    border: 1px solid #ddd;
-    padding: 5px;
-}
-.box-name{
-    background: white;
-    height: 100%;
-    width: 100%;
+    flex-direction: column;
+    gap: 5px;
     
 }
-.box-social ul{
+.box-profile2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+.one{
+    display: flex;
+    gap: 5px;
+}
+.one-1{
+    height: 250px;
+    width: 250px;
+    background: green;
+    border-radius: 12px;
+}
+.one-2{
+    height: 250px;
+    width: 500px;
+    background: red;
+    border-radius: 12px;
+}
+.one-3{
+    display: flex;
+    gap: 5px;
+}
+.one-4{
+    height: 250px;
+    width: 250px;
+    background: blue;
+    border-radius: 12px;
+}
+.one-5{
+    height: 250px;
+    width: 500px;
+    background: gray;
+    border-radius: 12px;
+}
+.two{
+    display: flex;
+    gap: 5px;
+}
+.two-1{
+    height: 250px;
+    width: 350px;
+    background: yellow;
+    border-radius: 12px;
+}
+.two-2{
+    height: 250px;
+    width: 400px;
+    background: black;
+    border-radius: 12px;
+}
+.tres{
     display: flex;
     align-items: center;
-    gap:3px;
 }
-.box-social a{
-    color: #212121;
-    font-size: 24px;
-}
-.profile-map{
-    height: 250px;
-    width: 25%;
-    background: blue;
-    padding: 5px;
-}
-.profile-body{
-    height: 250px;
-    width: 25%;
-    background: green;
-    padding: 5px;
-}
-.profile-services{
-    height: 250px;
-    width: 25%;
+.tres-1{
+    height: 505px;
+    width: 250px;
     background: pink;
-    padding: 5px;
+    border-radius: 12px;
 }
-.profile-video{
+.tres-4{
     height: 250px;
-    width: 50%;
-    background: yellow;
-    padding: 5px;
+    width: 250px;
+    background: orange;
+    border-radius: 12px;
+}
+.container-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px;
 }
 </style>
