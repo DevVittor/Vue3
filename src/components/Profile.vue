@@ -18,6 +18,13 @@ onMounted(() => {
     <section>
       <div class="h-auto w-full p-[10px] flex justify-center items-center">
         <div class="h-full w-[70%] flex flex-col justify-center items-center">
+          <div class="">
+            <button
+              class="bg-blue-500 mb-[5px] pr-[15px] pl-[15px] pb-[3px] pt-[3px] rounded-[3px] text-white font-semibold"
+            >
+              <i class="pr-1.5 ri-play-circle-line"></i>Video
+            </button>
+          </div>
           <div
             class="h-[180px] w-[180px] flex justify-center items-end shadow-md rounded-[12px]"
           >
