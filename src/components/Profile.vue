@@ -86,29 +86,29 @@ onMounted(() => {
             class="flex flex-wrap justify-center items-center gap-3 pt-[5px]"
           >
             <button
-              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
               <i class="pr-1.5 text-white fa-solid fa-bell-concierge"></i
               >Serviços
             </button>
             <button
-              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
               <i class="pr-1.5 text-white fa-solid fa-child-reaching"></i>Corpo
             </button>
             <button
-              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
               <i class="pr-1.5 text-white fa-regular fa-calendar-days"></i
               >Horários
             </button>
             <button
-              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
               <i class="pr-1.5 text-white fa-solid fa-map-pin"></i>Local
             </button>
             <button
-              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
               <i class="pr-1.5 text-white fa-solid fa-money-check-dollar"></i
               >Formas de Pagamento
