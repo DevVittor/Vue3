@@ -82,7 +82,9 @@ onMounted(() => {
               </ul>
             </nav>
           </div>
-          <div class="flex justify-center items-center gap-3 pt-[5px]">
+          <div
+            class="flex flex-wrap justify-center items-center gap-3 pt-[5px]"
+          >
             <button
               class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
