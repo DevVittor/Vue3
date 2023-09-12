@@ -93,6 +93,21 @@ onMounted(() => {
             >
               Corpo
             </button>
+            <button
+              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+            >
+              Horários
+            </button>
+            <button
+              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+            >
+              Local
+            </button>
+            <button
+              class="bg-black pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px] text-white"
+            >
+              Formas de Pagamento
+            </button>
           </div>
         </div>
       </div>
