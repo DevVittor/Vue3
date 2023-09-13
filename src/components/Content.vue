@@ -16,7 +16,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <a href="/profile">Perfil</a>
+  <a href="/perfil">Perfil</a>
   <section>
     <div
       className="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 p-1.5"
