@@ -16,7 +16,7 @@ onMounted(() => {
 <template>
   <main>
     <section>
-      <div class="h-auto w-full p-[10px] flex justify-center items-center">
+      <div class="h-auto w-full p-[5px] flex justify-center items-center">
         <div class="h-full w-[70%] flex flex-col justify-center items-center">
           <div class="">
             <button
