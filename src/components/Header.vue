@@ -2,64 +2,29 @@
 import { RouterLink } from "vue-router";
 </script>
 <template>
-  <header>
-    <div class="container-menu">
-      <div class="box-logo">
-        <RouterLink to="/"><h1>ABRIME</h1></RouterLink>
+  <header class="sticky top-0 z-50 border-b-[1px] border-[#ddd] bg-white">
+    <div
+      class="flex items-center sm:flex-row flex-col pb-[20px] justify-between pt-[10px] sm:pb-[10px] pr-[50px] pl-[50px]"
+    >
+      <div class="">
+        <RouterLink to="/"
+          ><h1 class="text-[36px] font-semibold">
+            A<b class="text-red-500">BR</b>IME
+          </h1></RouterLink
+        >
       </div>
-      <div class="box-menu">
-        <nav>
-          <ul>
-            <li>
-              <RouterLink to="/"
-                ><i class="ri-home-4-line"></i> Inicio</RouterLink
-              >
-            </li>
-            <li><RouterLink to="/">Categoria</RouterLink></li>
-            <li><RouterLink to="/profile">Sobre</RouterLink></li>
-            <li><RouterLink to="/">Contato</RouterLink></li>
-          </ul>
-        </nav>
+      <div class="flex items-center gap-3">
+        <button
+          class="border-[1px] border-gray-500 pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
+        >
+          Acessar
+        </button>
+        <button
+          class="bg-red-500 text-white border-[1px] border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
+        >
+          Conta Gratuita
+        </button>
       </div>
     </div>
   </header>
 </template>
-<style scoped>
-header {
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #ddd;
-  background: white;
-  z-index: 9999;
-}
-.container-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 50px;
-}
-.box-logo a {
-  color: #212121;
-  font-weight: 600;
-  font-size: 24px;
-}
-.box-menu ul {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.box-menu a {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  font-weight: 500;
-  color: #212121;
-  font-size: 16px;
-}
-@media screen and (max-width: 640px) {
-  .container-menu {
-    flex-direction: column;
-    padding-bottom: 15px;
-  }
-}
-</style>
