@@ -18,7 +18,7 @@ onMounted(() => {
 <template>
   <section>
     <div
-      className="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 pr-1.5 pl-1.5 pb-1.5"
+      class="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 pr-1.5 pl-1.5 pb-1.5"
     >
       <div v-for="items in urlFotos" class="mb-1.5 break-inside-avoid">
         <img class="w-full object-cover" :src="items" alt="imagem" />
