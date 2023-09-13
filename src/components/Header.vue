@@ -17,7 +17,7 @@ import { RouterLink } from "vue-router";
         <button
           class="border-[1px] border-gray-500 pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
         >
-          <a class="text-black" href="/perfil">Acessar</a>
+          <RouterLink to="/perfil" class="text-black">Acessar</RouterLink>
         </button>
         <button
           class="bg-red-500 text-white border-[1px] border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
