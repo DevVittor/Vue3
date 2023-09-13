@@ -26,5 +26,5 @@ import { RouterLink } from "vue-router";
         </button>
       </div>
     </div>
-  </header> href="/perfil"
+  </header>
 </template>
