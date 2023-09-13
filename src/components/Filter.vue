@@ -2,7 +2,7 @@
 <template>
   <section>
     <div
-      class="flex justify-between lg:flex-row flex-col items-center p-2 gap-3"
+      class="flex justify-between lg:flex-row flex-col items-center md:pt-5 md:pb-5 md:pr-1.5 md:pl-1.5 p-3 gap-3"
     >
       <div class="flex items-center gap-2">
         <button

@@ -42,12 +42,19 @@ onMounted(() => {
           </div>
           <div class="flex flex-col items-center justify-center">
             <h3 class="pt-[15px]">
-              <i class="pr-2 text-[20px] text-blue-500 ri-shield-check-fill"></i
-              >Fernanda Lima, 35
+              <i
+                class="pr-2 text-[20px] text-blue-500 ri-shield-check-fill"
+                title="Perfil Verificado"
+              ></i
+              ><i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>Fernanda
+              Lima, 35
             </h3>
             <span
-              ><i class="pr-2 text-[20px] text-red-500 ri-map-pin-fill"></i>Rio
-              de Janeiro, Rj</span
+              ><i
+                class="pr-2 text-[20px] text-red-500 ri-map-pin-fill"
+                title="Localização"
+              ></i
+              >Rio de Janeiro, Rj</span
             >
           </div>
           <div class="pt-[8px]">
@@ -61,22 +68,22 @@ onMounted(() => {
               <ul class="flex items-center gap-3">
                 <li>
                   <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-facebook-box-fill"></i
+                    ><i class="ri-facebook-box-fill" title="facebook"></i
                   ></a>
                 </li>
                 <li>
                   <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-instagram-line"></i
+                    ><i class="ri-instagram-line" title="Instagram"></i
                   ></a>
                 </li>
                 <li>
                   <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-twitter-x-fill"></i
+                    ><i class="ri-twitter-x-fill" title="Twitter"></i
                   ></a>
                 </li>
                 <li>
                   <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-telegram-fill"></i
+                    ><i class="ri-telegram-fill" title="Telegram"></i
                   ></a>
                 </li>
               </ul>
