@@ -1,13 +1,13 @@
 <script setup>
 document.title = "Home";
-import Banner from "../components/Banner.vue";
+import Anuncio from "../components/Anuncio.vue";
 import Content from "../components/Content.vue";
 import Filter from "../components/Filter.vue";
 </script>
 
 <template>
   <main>
-    <Banner />
+    <Anuncio />
     <Filter />
     <Content />
   </main>

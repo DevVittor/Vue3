@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import IconProfile from "./iconProfile.vue";
 </script>
 <template>
   <header class="sticky top-0 z-50 border-b-[1px] border-[#ddd] bg-white">
@@ -26,5 +27,6 @@ import { RouterLink } from "vue-router";
         </button>
       </div>
     </div>
+    <IconProfile />
   </header>
 </template>
