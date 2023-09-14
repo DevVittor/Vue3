@@ -2,7 +2,7 @@
 <template>
     <main>
         <section>
-            <div class="flex justify-center items-center p-3">
+            <div class="flex justify-center items-center pt-[40px] pb-[40px]">
                 <div class="border-[1px] border-[#ddd] rounded-[12px] flex items-center justify-center">
                     <div class="h-[650px] w-[400px] container-img-register">
                         <img class="pointer-events-none h-full w-full img-register object-cover" src="https://images.pexels.com/photos/2038561/pexels-photo-2038561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
