@@ -1,10 +1,11 @@
 <script setup>
-import typeAccount from "../components/typeAccount.vue";
+import Form from '../components/formRegister.vue'
+
 </script>
 <template>
   <main>
     <section>
-      <typeAccount />
+      <Form />
     </section>
   </main>
 </template>

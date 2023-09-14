@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div class="flex items-center justify-center p-[40px]">
-    <div class="flex justify-center items-center flex-col gap-10 border-[1px] bg-black text-white border-[#ddd] h-[500px] w-[800px] rounded-[12px] shadow-lg">
+    <div class="flex justify-center items-center flex-col gap-10 border-[1px] bg-white text-black border-[#ddd] h-[500px] w-[800px] rounded-[12px] shadow-lg">
         <div class="">
             <h2 class="text-[30px] font-semibold">Eu sou um(a)</h2>
         </div>
