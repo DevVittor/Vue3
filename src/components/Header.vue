@@ -23,7 +23,7 @@ import IconProfile from "./iconProfile.vue";
         <button
           class="bg-red-500 text-white border-[1px] border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
         >
-          Conta Gratuita
+          <RouterLink to="/register">Conta Gratuita</RouterLink>
         </button>
       </div>
     </div>
