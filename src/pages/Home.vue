@@ -41,6 +41,7 @@ import Filter from "../components/Filter.vue";
   gap: 5px;
   height: auto;
   width: 100%;
+  padding-bottom: 20px;
 }
 .card{
   height: 350px; 
