@@ -4,6 +4,7 @@ import Anuncio from "../components/Anuncio.vue";
 //import Content from "../components/Content.vue";
 import Filter from "../components/Filter.vue";
 import {ref} from 'vue';
+import { RouterLink } from "vue-router";
 
 let Foto = [
     "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -122,9 +123,13 @@ let fotos = ref([
     <Filter />
     <div class="container-card">
       <div class="box-card">
-        <div class="card" v-for="items in fotos">
-          <img class="h-full w-full object-cover rounded-[10px]" :src="items" alt="">
-        </div>
+        
+          <div class="card" v-for="items in fotos">
+            <RouterLink to="/2">
+              <img class="h-full w-full object-cover rounded-[10px]" :src="items" alt="">
+            </RouterLink>
+          </div>
+        
       </div>
     </div>
   </main>
