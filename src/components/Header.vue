@@ -5,7 +5,7 @@ import IconProfile from "./iconProfile.vue";
 <template>
   <header class="sticky top-0 z-50 border-b-[1px] border-[#ddd] bg-white">
     <div
-      class="flex items-center sm:flex-row flex-col md:pb-[10px] pb-[10px] justify-between pt-[0px] sm:pb-[10px] sm:pt-[5px] pr-[50px] pl-[50px]"
+      class="container-menu flex items-center sm:flex-row flex-col md:pb-[10px] pb-[10px] justify-between pt-[0px] sm:pb-[10px] sm:pt-[5px] pr-[50px] pl-[50px]"
     >
       <div class="">
         <RouterLink to="/"
@@ -26,7 +26,16 @@ import IconProfile from "./iconProfile.vue";
           <RouterLink to="/register">Conta Gratuita</RouterLink>
         </button>
       </div>
+      <IconProfile />
     </div>
-    <IconProfile />
+    
   </header>
 </template>
+<style scoped>
+@media screen and (max-width:740px){
+.container-menu{
+  flex-direction: column;
+  gap: 10px;
+}
+}
+</style>
