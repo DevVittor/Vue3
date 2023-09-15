@@ -12,6 +12,21 @@ onMounted(() => {
     })
     .catch((error) => console.error(error));
 });
+
+const servi = ref([
+  "Casal",
+  "Anal",
+  "Beijo",
+  "Orgia"
+]);
+
+function Clicou(){
+  const modalDiv = document.getElementById('Service');
+  modalDiv.classList.toggle('selected');
+}
+
+
+
 </script>
 <template>
   <main>
@@ -93,6 +108,7 @@ onMounted(() => {
             class="flex flex-wrap justify-center items-center gap-3 pt-[5px]"
           >
             <button
+              @click="Clicou"
               class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
             >
               <i class="pr-1.5 text-white fa-solid fa-bell-concierge"></i
@@ -133,5 +149,38 @@ onMounted(() => {
         </div>
       </div>
     </section>
+    <section id="Service" class="selected">
+      <div class='modal'>
+        <nav>
+          <ul>
+            <li v-for="list in servi"><span>{{ list }}</span></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
   </main>
 </template>
+<style scoped>
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  left: 0;
+  right: 570px;
+  top: 370px;
+  bottom: 0;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 12px;
+  padding: 20px;
+}
+.selected{
+  display: none;
+}
+
+</style>

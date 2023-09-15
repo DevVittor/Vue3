@@ -123,13 +123,11 @@ let fotos = ref([
     <Filter />
     <div class="container-card">
       <div class="box-card">
-        
           <div class="card" v-for="items in fotos">
             <RouterLink to="/2">
               <img class="h-full w-full object-cover rounded-[10px]" :src="items" alt="">
             </RouterLink>
-          </div>
-        
+          </div>   
       </div>
     </div>
   </main>
