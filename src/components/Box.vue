@@ -67,7 +67,6 @@ import Content from './Content.vue';
     width: auto;
     padding: 10px;
     border-radius: 5px;
-    background: red;
 }
 .box-2 button{
     background: black ;
@@ -78,6 +77,9 @@ import Content from './Content.vue';
     border-radius: 3px;
 }
 @media screen and (max-width:879px){
+    .container-profile{
+        padding: 10px;
+    }
     .box-2{
         height: auto;
         flex-wrap: wrap;
