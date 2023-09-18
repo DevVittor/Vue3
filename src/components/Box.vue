@@ -80,7 +80,7 @@ import Content from './Content.vue';
     }
     .box-1{
         height: auto;
-        width: 95%;
+        width: 80%;
     }
     .box-2{
         height: auto;
@@ -93,7 +93,7 @@ import Content from './Content.vue';
 @media screen and (max-width:375px){
     .box-1{
         height: auto;
-        width: 95%;
+        width: 80%;
     }
 }
 </style>
