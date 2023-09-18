@@ -7,7 +7,7 @@ import Content from './Content.vue';
             <div class="container-profile">
                 <div class="box-profile">
                     <div class="box-1">
-                        <img src="https://images.pexels.com/photos/1035678/pexels-photo-1035678.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                        <img src="https://images.pexels.com/photos/982585/pexels-photo-982585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
                     </div>
                     <div class="box-2">
                         <button><i class="pr-1.5 fa-solid fa-image"></i>Fotos</button>
