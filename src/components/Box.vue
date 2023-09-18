@@ -50,13 +50,11 @@ import Content from './Content.vue';
 .box-1{
     height: 350px;
     width: auto;
-    border-radius: 5px;
 }
 .box-1 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 5px;
 }
 .box-2{
     display: flex;
@@ -86,6 +84,12 @@ import Content from './Content.vue';
         flex-direction: row;
         align-items: center;
         width: 100%;
+    }
+}
+@media screen and (max-width:375px){
+    .box-1{
+        height: auto;
+        width: 95%;
     }
 }
 </style>
