@@ -1,6 +1,8 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import { ref, onMounted } from "vue";
 import axios from "axios";
+
 
 const urlFotos = ref([]);
 
@@ -9,6 +11,7 @@ onMounted(() => {
     .get("http://localhost:8080/")
     .then((res) => {
       urlFotos.value = res.data.fotos;
+      document.title = res.data.page;
     })
     .catch((error) => {
       console.error(error);
@@ -17,12 +20,44 @@ onMounted(() => {
 </script>
 <template>
   <section>
-    <div
-      class="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 pr-1.5 pl-1.5 pb-1.5"
-    >
-      <div v-for="items in urlFotos" class="mb-1.5 break-inside-avoid">
-        <img class="w-full object-cover" :src="items" alt="imagem" />
+    <div class="container-card">
+      <div class="box-card">
+          <div class="card" v-for="items in urlFotos">
+            <RouterLink to="/2">
+              <img class="h-full w-full object-cover pointer-events-none" :src="items" alt="Imagem">
+            </RouterLink>
+          </div>   
       </div>
     </div>
   </section>
 </template>
+<style scoped>
+.container-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.box-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  height: auto;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.card{
+  height: 350px; 
+  width: 220px;
+  background: black;
+  border-radius: 10px;
+}
+@media screen and (max-width:460px){
+  .card{
+    height: 450px;
+    width: 320px;
+  }
+}
+</style>

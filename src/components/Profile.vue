@@ -3,12 +3,27 @@ import axios from "axios";
 import { ref, onMounted } from "vue";
 
 const myGallery = ref([]);
+const name = ref();
+const age = ref();
+const estado = ref();
+const cidade = ref();
+const money = ref();
+const iconCheck = ref();
+const descriptionProfile = ref();
+
 onMounted(() => {
   axios
-    .get("http://localhost:8080/")
+    .get("http://localhost:8080/:id")
     .then((res) => {
       myGallery.value = res.data.fotos;
-      document.title = res.data.people;
+      document.title = res.data.page;
+      name.value = res.data.profile;
+      age.value = res.data.age;
+      estado.value = res.data.estado;
+      cidade.value = res.data.cidade;
+      money.value = res.data.money;
+      iconCheck.value = res.data.check
+      descriptionProfile.value = res.data.description;
     })
     .catch((error) => console.error(error));
 });
@@ -51,31 +66,33 @@ function Clicou(){
             <div class="absolute mb-[-5px]">
               <span
                 class="bg-red-500 shadow-md text-[14px] text-white font-semibold pt-[5px] pb-[5px] pr-[20px] pl-[20px] rounded-[3px]"
-                >R$ 250/H</span
+                >R$ {{money}}/H</span
               >
             </div>
           </div>
           <div class="flex flex-col items-center justify-center">
-            <h3 class="pt-[15px]">
+            <h3 class="pt-[15px]" v-if="iconCheck == true">
               <i
                 class="pr-2 text-[20px] text-blue-500 ri-shield-check-fill"
                 title="Perfil Verificado"
               ></i
-              ><i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>Fernanda
-              Lima, 35
+              ><i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>{{name}}, {{age}}
+            </h3>
+            <h3 class="pt-[15px]" v-else>
+              <i class="pr-2 text-[20px] text-red-500 ri-close-circle-fill"></i>
+              <i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>{{name}}, {{age}}
             </h3>
             <span
               ><i
                 class="pr-2 text-[20px] text-red-500 ri-map-pin-fill"
                 title="Localização"
               ></i
-              >Rio de Janeiro, Rj</span
+              >{{estado}}, {{ cidade }}</span
             >
           </div>
           <div class="pt-[8px]">
             <p class="w-[350px] text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-              eveniet, ipsam consequuntur esse iure voluptas quam eius ullam
+              {{ descriptionProfile }}
             </p>
           </div>
           <div class="flex justify-center items-center gap-3 pt-[5px]">
@@ -145,7 +162,7 @@ function Clicou(){
         className="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 p-1.5"
       >
         <div v-for="items in myGallery" class="mb-1.5 break-inside-avoid">
-          <img class="w-full object-cover" :src="items" alt="imagem" />
+          <img class="w-full object-cover pointer-events-none" :src="items" alt="imagem" />
         </div>
       </div>
     </section>

@@ -21,25 +21,27 @@
                             <span>Ou</span>
                             <hr class="w-[35%]">
                         </div>
-                        <div class="flex flex-col items-center gap-2">
-                            <label class="flex flex-col " for="">
-                                Nome
-                                <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="text" name="" id="" placeholder="Nome Completo">
-                            </label>
-                            <label class="flex flex-col" for="">
-                                Email
-                                <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="email" name="" id="" placeholder="Email">
-                            </label>
-                            <label class="flex flex-col" for="">
-                                Senha
-                                <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="password" name="" id="" placeholder="Senha">
-                            </label>
-                            <label class="flex flex-col" for="">
-                                Confirmar Senha
-                                <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="password" name="" id="" placeholder="Confirme a Senha">
-                            </label>
-                            <button class="text-white font-semibold pr-[10px] mt-[15px] w-full bg-red-500 pl-[10px] pt-[5px] pb-[5px] rounded-[3px]">Registrar <i class="pl-1.5 ri-arrow-right-fill"></i></button>
-                            <button class="text-white font-semibold pr-[10px] w-full bg-blue-500 pl-[10px] pt-[5px] pb-[5px] rounded-[3px]">Já tenho uma conta <i class="pl-1.5 ri-door-open-fill"></i></button>
+                        <div class="flex flex-col items-center">
+                            <form class="flex flex-col gap-2" action="/register" method="post">
+                                <label class="flex flex-col " for="">
+                                    Nome
+                                    <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="text" name="" id="" placeholder="Nome Completo">
+                                </label>
+                                <label class="flex flex-col" for="">
+                                    Email
+                                    <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="email" name="" id="" placeholder="Email">
+                                </label>
+                                <label class="flex flex-col" for="">
+                                    Senha
+                                    <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="password" name="" id="" placeholder="Senha">
+                                </label>
+                                <label class="flex flex-col" for="">
+                                    Confirmar Senha
+                                    <input class="border-[1px] border-[#ddd] rounded-[3px] pt-[5px] pb-[5px] pr-[10px] pl-[10px]" type="password" name="" id="" placeholder="Confirme a Senha">
+                                </label>
+                                <button class="text-white font-semibold pr-[10px] mt-[15px] w-full bg-red-500 pl-[10px] pt-[5px] pb-[5px] rounded-[3px]">Registrar <i class="pl-1.5 ri-arrow-right-fill"></i></button>
+                            </form>
+                            <button class="text-white font-semibold mt-[10px] pr-[10px] w-full bg-blue-500 pl-[10px] pt-[5px] pb-[5px] rounded-[3px]">Já tenho uma conta <i class="pl-1.5 ri-door-open-fill"></i></button>
                         </div>
                     </div>
                 </div>

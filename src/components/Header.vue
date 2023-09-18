@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import IconProfile from "./iconProfile.vue";
+
 </script>
 <template>
   <header class="sticky top-0 z-50 border-b-[1px] border-[#ddd] bg-white">
@@ -13,12 +14,13 @@ import IconProfile from "./iconProfile.vue";
             A<b class="text-red-500">BR</b>IME
           </h1></RouterLink
         >
+        <RouterLink to="/box">Perfil</RouterLink>
       </div>
       <div class="flex items-center gap-3">
         <button
           class="border-[1px] border-gray-500 pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
         >
-          <RouterLink to="/perfil" class="text-black">Acessar</RouterLink>
+          <RouterLink to="/acessar" class="text-black">Acessar</RouterLink>
         </button>
         <button
           class="bg-red-500 text-white border-[1px] border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"
