@@ -78,6 +78,10 @@ import Content from './Content.vue';
     .container-profile{
         padding: 10px;
     }
+    .box-1{
+        height: auto;
+        width: 95%;
+    }
     .box-2{
         height: auto;
         flex-wrap: wrap;
