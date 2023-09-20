@@ -64,7 +64,7 @@ const fotos = ref([
 </script>
 <template>
     <section>
-        <div className="m-auto w-full  2xl:columns-6 lg:columns-4 columns-2 gap-3 p-3">
+        <div className="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
             <div v-for="imagens in fotos" className="mb-2.5 w-full break-inside-avoid">
                 <img className="max-w-full rounded-md" :src="imagens" alt="" />
             </div>

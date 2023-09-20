@@ -121,9 +121,13 @@ import StyleCard from './styleCard.vue';
     color: #2192FF;
 }
 
+.box-description-profile {
+    background: red;
+}
+
 .box-name-image {
     display: flex;
-    align-items: center;
+    align-items: cenrgb(155, 153, 153);
     gap: 10px;
 }
 
@@ -189,7 +193,7 @@ import StyleCard from './styleCard.vue';
     }
 
     .box-video-profile {
-        height: 200px;
+        height: 250px;
     }
 
 }
