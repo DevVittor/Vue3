@@ -1,35 +1,30 @@
 <script setup>
-import Content from './Content.vue';
 import { RouterLink } from 'vue-router';
-import { ref } from 'vue';
 import StyleCard from './styleCard.vue';
-
-const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",]);
 
 </script>
 <template>
     <main>
 
         <section>
-            <div class="flex items-center p-10 gap-5">
-                <div class="flex flex-col  bg-black text-white gap-2">
-                    <div class="">
-                        <button class="bg-black text-white font-semibold text-[17px] rounded-md"><i
-                                class="pr-1.5 text-blue-500 ri-shield-check-fill"></i>Perfil Verificado</button>
+            <div class="container-profile">
+                <div class="box-profile">
+                    <div class="box-check">
+                        <button class=""><i class="ri-shield-check-fill"></i>Perfil Verificado</button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="box-name-image">
                         <img class="h-[50px] w-[50px] object-cover rounded-full"
                             src="https://images.pexels.com/photos/15702743/pexels-photo-15702743/free-photo-of-lindo-bonito-atraente-elegante.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             alt="">
                         <h2 class="text-[44px] font-semibold">Fernanda Lima, 35</h2>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="box-local-profile flex items-center gap-3">
                         <h4 class="text-[18px] font-medium"><i class="pr-1.5 text-[#FE0000] ri-map-pin-fill"></i>Rio de
                             Janeiro, RJ</h4>
                         <span>|</span>
                         <span><i class="pr-1.5 ri-women-line"></i>Mulher</span>
                     </div>
-                    <div class="w-[700px]">
+                    <div class="w-[700px] box-description-profile">
                         <p class="text-[16px] font-light leading-[20px]">Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Iure optio blanditiis ipsa corporis earum reiciendis itaque dolor magni fugiat?
                             Reprehenderit molestiae enim laudantium, doloremque ullam quo odit dolores fugiat tempora ea sed
@@ -40,13 +35,11 @@ const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",
                             dolore. Itaque ipsa similique consequuntur consequatur fugiat repudiandae explicabo harum
                             distinctio deserunt facilis! Quod quas architecto sit.</p>
                     </div>
-                    <div class="flex items-center gap-3 pt-[10px]">
-                        <div class="">
+                    <div class="flex container-btns-profile  items-center gap-3 pt-[10px]">
+                        <div class="flex items-center gap-3">
                             <button
                                 class="bg-white text-black font-semibold text-[16px] pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px]">R$
                                 250/H</button>
-                        </div>
-                        <div class="">
                             <button
                                 class="bg-white text-black font-semibold text-[16px] pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px]"><i
                                     class="pr-1.5 fa-solid fa-bell-concierge"></i>Serviços</button>
@@ -72,8 +65,8 @@ const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",
                     </div>
                 </div>
                 <div class=" w-full h-full flex justify-center">
-                    <div class="flex items-start gap-5">
-                        <div class="flex flex-col  gap-3 text-white ">
+                    <div class="flex option-profile items-start gap-5">
+                        <div class="flex flex-col box-option-profile gap-3 text-white ">
                             <button
                                 class="bg-white text-black border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
                                     class="pr-1.5 fa-solid fa-image"></i>Vídeo</button>
@@ -90,12 +83,9 @@ const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",
                                 class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
                                     class="pr-1.5 fa-solid fa-hand-holding-dollar"></i>Formas de Pagamento</button>
                         </div>
-                        <div class="">
-                            <div class="h-[300px] w-[550px] bg-black rounded-md">
-                                <iframe class="w-full h-full object-cover rounded-md"
-                                    src="https://www.youtube.com/embed/laf64Ms0yV4" frameborder="0"
-                                    allowfullscreen></iframe>
-                            </div>
+                        <div class="h-[300px] box-video-profile w-[550px] bg-black rounded-md">
+                            <iframe class="w-full h-full object-cover rounded-md"
+                                src="https://www.youtube.com/embed/laf64Ms0yV4" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -105,7 +95,98 @@ const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",
     </main>
 </template>
 <style scoped>
-main {
-    background: #000;
+.container-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.box-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+}
+
+.box-check button {
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.box-check i {
+    padding-right: 5px;
+    color: #2192FF;
+}
+
+.box-name-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width:375px) {
+    .container-profile {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .box-profile {
+        width: 100%;
+    }
+
+    .box-check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-name-image {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .box-name-image img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .box-name-image h2 {
+        font-size: 28px;
+    }
+
+    .box-local-profile {
+        justify-content: center;
+    }
+
+    .box-description-profile {
+        width: 100%;
+    }
+
+    .container-btns-profile {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .option-profile {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .box-option-profile {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .box-video-profile {
+        height: 200px;
+    }
+
 }
 </style>
