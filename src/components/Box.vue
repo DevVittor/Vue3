@@ -43,7 +43,7 @@ import StyleCard from './styleCard.vue';
                                 class="bg-white text-black font-semibold text-[16px] pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px]"><i
                                     class="pr-1.5 fa-solid fa-bell-concierge"></i>Serviços</button>
                         </div>
-                        <div class="">
+                        <div class="container-social">
                             <nav>
                                 <ul class="flex items-center gap-3 text-[20px]">
                                     <li>
@@ -63,29 +63,27 @@ import StyleCard from './styleCard.vue';
                         </div>
                     </div>
                 </div>
-                <div class=" w-full h-full flex justify-center">
-                    <div class="flex option-profile items-start gap-5">
-                        <div class="flex flex-col box-option-profile gap-3 text-white ">
-                            <button
-                                class="bg-white text-black border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
-                                    class="pr-1.5 fa-solid fa-image"></i>Vídeo</button>
-                            <button
-                                class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
-                                    class="pr-1.5 fa-solid fa-child-reaching"></i>Corpo</button>
-                            <button
-                                class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
-                                    class="pr-1.5 fa-regular fa-calendar-days"></i>Horários</button>
-                            <button
-                                class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
-                                    class="pr-1.5 fa-solid fa-map-pin"></i>Localização</button>
-                            <button
-                                class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
-                                    class="pr-1.5 fa-solid fa-hand-holding-dollar"></i>Formas de Pagamento</button>
-                        </div>
-                        <div class="h-[300px] box-video-profile w-[550px] bg-black rounded-md">
-                            <iframe class="w-full h-full object-cover rounded-md"
-                                src="https://www.youtube.com/embed/laf64Ms0yV4" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                <div class="option-profile w-full h-full flex justify-center">
+                    <div class="flex flex-col box-option-profile  gap-3 text-white ">
+                        <button
+                            class="bg-white text-black border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
+                                class="pr-1.5 fa-solid fa-image"></i>Vídeo</button>
+                        <button
+                            class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
+                                class="pr-1.5 fa-solid fa-child-reaching"></i>Corpo</button>
+                        <button
+                            class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
+                                class="pr-1.5 fa-regular fa-calendar-days"></i>Horários</button>
+                        <button
+                            class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
+                                class="pr-1.5 fa-solid fa-map-pin"></i>Localização</button>
+                        <button
+                            class="bg-black text-white border-[1px] border-white font-medium pr-[20px] pl-[20px] pt-[3px] pb-[3px] rounded-[3px]"><i
+                                class="pr-1.5 fa-solid fa-hand-holding-dollar"></i>Formas de Pagamento</button>
+                    </div>
+                    <div class="h-[300px] box-video-profile w-[550px] bg-black rounded-md">
+                        <iframe class="w-full h-full object-cover rounded-md"
+                            src="https://www.youtube.com/embed/laf64Ms0yV4" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -130,6 +128,7 @@ import StyleCard from './styleCard.vue';
     .container-profile {
         flex-wrap: wrap;
         padding: 10px;
+        gap: 10px;
     }
 
     .box-profile {
@@ -171,9 +170,15 @@ import StyleCard from './styleCard.vue';
         justify-content: center;
     }
 
+    .container-social a {
+        font-size: 28px;
+    }
+
     .option-profile {
         flex-wrap: wrap;
+        flex-direction: column-reverse;
         width: 100%;
+        gap: 20px;
     }
 
     .box-option-profile {
@@ -181,12 +186,14 @@ import StyleCard from './styleCard.vue';
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
         padding: 0;
         gap: 10px;
     }
 
     .box-video-profile {
         height: 200px;
+        width: 100%;
     }
 
 }
