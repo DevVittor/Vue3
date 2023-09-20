@@ -127,7 +127,7 @@ import StyleCard from './styleCard.vue';
     gap: 10px;
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:640px) {
     .container-profile {
         flex-wrap: wrap;
         padding: 10px;
