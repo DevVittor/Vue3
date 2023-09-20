@@ -163,6 +163,8 @@ import StyleCard from './styleCard.vue';
 
     .box-description-profile {
         width: 100%;
+        padding: 0;
+        background: red;
     }
 
     .container-btns-profile {
@@ -181,7 +183,9 @@ import StyleCard from './styleCard.vue';
         align-items: center;
         flex-direction: row;
         flex-wrap: wrap;
-
+        background: red;
+        padding: 0;
+        gap: 10px;
     }
 
     .box-video-profile {
