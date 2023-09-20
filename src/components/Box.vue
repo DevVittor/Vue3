@@ -2,6 +2,7 @@
 import Content from './Content.vue';
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue';
+import StyleCard from './styleCard.vue';
 
 const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",]);
 
@@ -100,7 +101,7 @@ const list = ref(["Casal", "Casal", "Casal", "Casal", "Casal", "Casal", "Casal",
                 </div>
             </div>
         </section>
-        <Content />
+        <StyleCard />
     </main>
 </template>
 <style scoped>
