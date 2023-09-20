@@ -5,7 +5,6 @@ import StyleCard from './styleCard.vue';
 </script>
 <template>
     <main>
-
         <section>
             <div class="container-profile">
                 <div class="box-profile">
