@@ -1,6 +1,16 @@
 <script setup>
-
+import { onMounted,onBeforeUnmount  } from 'vue';
 import { RouterLink } from 'vue-router';
+
+// Desabilitar o scroll ao montar o componente
+onMounted(()=>{
+    document.body.style.overflow = 'hidden';
+});
+
+// Habilitar o scroll novamente ao destruir o componente
+onBeforeUnmount(() => {
+    document.body.style.overflow = 'auto';
+});
 </script>
 <template>
     <section id="section-acessar">
