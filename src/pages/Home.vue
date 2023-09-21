@@ -62,11 +62,20 @@ function fecharModal() {
 }
 
 .modal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background: white;
   color: black;
   padding: 10px 20px;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.modal h3 {
+  font-size: 32px;
+  font-weight: 700;
+
 }
 
 .modal button {
