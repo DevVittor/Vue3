@@ -11,7 +11,7 @@ import { RouterLink } from "vue-router";
       <div class="">
         <RouterLink to="/">
           <h1 class="text-[36px] font-semibold">
-            ABRIME
+            A<b class="text-[#FE0]">BR</b>IME
           </h1>
         </RouterLink>
         <!--<RouterLink to="/box">Perfil</RouterLink>-->

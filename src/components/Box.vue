@@ -1,12 +1,17 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import StyleCard from './styleCard.vue';
+import Services from './Services.vue';
 
 </script>
 <template>
     <main>
         <section>
+            <Services />
+        </section>
+        <section>
             <div class="container-profile">
+
                 <div class="box-profile">
                     <div class="box-check">
                         <button class=""><i class="ri-shield-check-fill"></i>Perfil Verificado</button>
@@ -24,13 +29,17 @@ import StyleCard from './styleCard.vue';
                         <span><i class="pr-1.5 ri-women-line"></i>Mulher</span>
                     </div>
                     <div class="w-[700px] box-description-profile">
-                        <p class="text-[16px] font-light leading-[20px]">Lorem ipsum dolor sit amet consectetur adipisicing
+                        <p class="text-[16px] font-light leading-[20px]">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
                             elit. Iure optio blanditiis ipsa corporis earum reiciendis itaque dolor magni fugiat?
-                            Reprehenderit molestiae enim laudantium, doloremque ullam quo odit dolores fugiat tempora ea sed
+                            Reprehenderit molestiae enim laudantium, doloremque ullam quo odit dolores fugiat tempora ea
+                            sed
                             animi quaerat illum omnis quod velit unde. Fugiat maxime mollitia officia voluptatibus
                             aspernatur consequuntur totam reiciendis recusandae minus porro, nemo dignissimos laboriosam
-                            quidem, illum dicta. Mollitia soluta non odio aliquam, sequi fuga maiores vitae ipsum commodi ex
-                            asperiores et nostrum officia quae alias eaque, labore expedita praesentium autem eum qui cum
+                            quidem, illum dicta. Mollitia soluta non odio aliquam, sequi fuga maiores vitae ipsum
+                            commodi ex
+                            asperiores et nostrum officia quae alias eaque, labore expedita praesentium autem eum qui
+                            cum
                             dolore. Itaque ipsa similique consequuntur consequatur fugiat repudiandae explicabo harum
                             distinctio deserunt facilis! Quod quas architecto sit.</p>
                     </div>
@@ -39,9 +48,6 @@ import StyleCard from './styleCard.vue';
                             <button
                                 class="bg-white text-black font-semibold text-[16px] pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px]">R$
                                 250/H</button>
-                            <button
-                                class="bg-white text-black font-semibold text-[16px] pr-[20px] pl-[20px] pt-[5px] pb-[5px] rounded-[3px]"><i
-                                    class="pr-1.5 fa-solid fa-bell-concierge"></i>Serviços</button>
                         </div>
                         <div class="container-social">
                             <nav>
@@ -111,6 +117,12 @@ import StyleCard from './styleCard.vue';
     font-weight: 600;
     font-size: 16px;
     border-radius: 5px;
+}
+
+.option-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .box-check i {

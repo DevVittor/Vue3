@@ -22,23 +22,24 @@ onMounted(() => {
   <section>
     <div class="container-card">
       <div class="box-card">
-          <div class="card" v-for="items in urlFotos">
-            <RouterLink to="/2">
-              <img class="h-full w-full object-cover pointer-events-none" :src="items" alt="Imagem">
-            </RouterLink>
-          </div>   
+        <div class="card" v-for="items in urlFotos">
+          <RouterLink to="/2">
+            <img class="h-full w-full object-cover pointer-events-none" :src="items" alt="Imagem">
+          </RouterLink>
+        </div>
       </div>
     </div>
   </section>
 </template>
 <style scoped>
-.container-card{
+.container-card {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.box-card{
+
+.box-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,16 +47,18 @@ onMounted(() => {
   gap: 5px;
   height: auto;
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 60px;
 }
-.card{
-  height: 350px; 
+
+.card {
+  height: 350px;
   width: 220px;
   background: black;
   border-radius: 10px;
 }
-@media screen and (max-width:460px){
-  .card{
+
+@media screen and (max-width:460px) {
+  .card {
     height: 450px;
     width: 320px;
   }

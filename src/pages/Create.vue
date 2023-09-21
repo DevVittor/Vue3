@@ -1,11 +1,11 @@
 <script setup>
-import Form from '../components/formRegister.vue'
+import Formulario from '../components/formRegister.vue'
 
 </script>
 <template>
   <main>
     <section>
-      <Form />
+      <Formulario />
     </section>
   </main>
 </template>

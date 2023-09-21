@@ -4,6 +4,7 @@ import Content from "../components/Content.vue";
 import Cookie from "../components/Cookie.vue";
 import Filter from "../components/Filter.vue";
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import Services from "../components/Services.vue";
 
 let open = ref(false);
 
@@ -20,6 +21,9 @@ function fecharModal() {
 
 <template>
   <main>
+    <section>
+      <Services />
+    </section>
     <section>
       <div class="popup">
         <h1>Vue 3 Modal!</h1>
@@ -81,6 +85,7 @@ function fecharModal() {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  height: auto;
   gap: 10px;
   background: white;
   color: black;

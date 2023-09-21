@@ -24,6 +24,14 @@
   </footer>
 </template>
 <style scoped>
+footer {
+  margin: auto;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  padding-top: 20px;
+}
+
 .container-footer {
   display: flex;
   padding: 10px 50px;
