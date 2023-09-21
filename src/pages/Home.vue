@@ -44,8 +44,15 @@ function fecharModal() {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 10px;
   padding: 20px;
   background: white !important;
+}
+
+.popup h1 {
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .modal-div {
@@ -59,6 +66,7 @@ function fecharModal() {
   align-items: center;
   backdrop-filter: blur(12px);
   color: white;
+  padding: 10px 20px;
 }
 
 .modal {
