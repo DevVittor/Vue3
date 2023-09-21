@@ -9,9 +9,7 @@
         <nav>
           <ul>
             <li>
-              <a href="#" target="_blank"
-                ><i class="ri-facebook-box-fill"></i
-              ></a>
+              <a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a>
             </li>
             <li>
               <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
@@ -32,21 +30,26 @@
   justify-content: space-between;
   align-items: center;
   background: black;
+  border-top: 1px solid rgb(17, 24, 39);
 }
+
 .direitos-footer span {
   color: #fff;
   font-weight: 500;
   font-size: 16px;
 }
+
 .social-footer ul {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .social-footer a {
   font-size: 20px;
   color: white;
 }
+
 @media screen and (max-width: 640px) {
   .container-footer {
     flex-direction: column;
