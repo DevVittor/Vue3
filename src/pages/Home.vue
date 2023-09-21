@@ -27,8 +27,8 @@ function fecharModal() {
           Modal</button>
         <div class="modal-div" v-if="open">
           <div class="modal">
+            <button @click="fecharModal"><i class="text-red-500 fa-solid fa-xmark"></i></button>
             <h3>Esse modal está aberto</h3>
-            <button @click="fecharModal">Close Modal</button>
           </div>
         </div>
       </div>
@@ -66,12 +66,13 @@ function fecharModal() {
   align-items: center;
   backdrop-filter: blur(12px);
   color: white;
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
   background: white;
   color: black;
@@ -81,17 +82,20 @@ function fecharModal() {
 }
 
 .modal h3 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
-
 }
 
-.modal button {
+.modal i {
+  font-size: 32px;
+}
+
+/*.modal button {
   padding: 3px 20px;
   border-radius: 3px;
   background: black;
   color: white;
   font-size: 16px;
   font-weight: 600;
-}
+}*/
 </style>
