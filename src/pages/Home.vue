@@ -30,8 +30,11 @@ function fecharModal() {
             <div class="btn-closed">
               <button @click="fecharModal"><i class="text-red-500 fa-solid fa-xmark"></i></button>
             </div>
-            <div class="">
+            <div class="flex flex-col gap-3">
               <h3>Esse modal está aberto</h3>
+              <img class="h-[350px] w-full object-cover rounded-md"
+                src="https://images.pexels.com/photos/2467394/pexels-photo-2467394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="">
             </div>
           </div>
         </div>
