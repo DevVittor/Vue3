@@ -30,9 +30,9 @@ function fecharModal() {
             <div class="btn-closed">
               <button @click="fecharModal"><i class="text-red-500 fa-solid fa-xmark"></i></button>
             </div>
-            <div class="flex flex-col gap-3 bg-white p-3 rounded-md">
+            <div class="">
               <h3>Esse modal está aberto</h3>
-              <img class="h-[400px] w-full object-cover rounded-md"
+              <img class="h-[400px] w-full object-cover"
                 src="https://images.pexels.com/photos/2467394/pexels-photo-2467394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="">
             </div>
@@ -74,17 +74,19 @@ function fecharModal() {
   backdrop-filter: blur(12px);
   color: white;
   padding: 10px;
-
 }
 
 .modal {
+  transition: all ease-in .4s;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 20px;
+  gap: 10px;
+  background: white;
   color: black;
   padding: 10px 20px;
   border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 
@@ -93,9 +95,14 @@ function fecharModal() {
   font-weight: 700;
 }
 
+.btn-closed {
+  position: relative;
+  color: red;
+}
 
 .btn-closed i {
   font-size: 32px;
+  color: red;
 }
 
 /*.modal button {
