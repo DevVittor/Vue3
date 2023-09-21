@@ -64,13 +64,17 @@ function fecharModal() {
 .modal {
   background: white;
   color: black;
-  padding: 50px 100px;
+  padding: 10px 20px;
   border-radius: 5px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .modal button {
-  color: red;
-  font-size: 36px;
+  padding: 3px 20px;
+  border-radius: 3px;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
 </style>
