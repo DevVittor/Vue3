@@ -162,6 +162,7 @@ import StyleCard from './styleCard.vue';
     .box-description-profile {
         width: 100%;
         padding: 0;
+        text-align: center;
     }
 
     .container-btns-profile {
