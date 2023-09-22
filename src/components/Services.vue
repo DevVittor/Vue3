@@ -92,6 +92,10 @@
     text-align: center;
 }
 
+div:hover {
+    animation-play-state: paused;
+}
+
 @keyframes scroll {
     from {
         transform: translateX(0px);
