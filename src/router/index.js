@@ -10,8 +10,8 @@ const router = createRouter({
         },
         {
             path:'/:id',
-            name:'profile',
-            component:()=>import('../components/Profile.vue')
+            name:'box',
+            component:()=>import('../components/Box.vue')
         },
         {
             path:'/perfil',
@@ -28,11 +28,6 @@ const router = createRouter({
             name:'Acessar',
             component:()=>import('../pages/Acessar.vue')
         },
-        {
-            path:'/box',
-            name:'Box',
-            component:()=>import('../components/Box.vue')
-        }
 
     ]
 })

@@ -1,14 +1,14 @@
 <script setup>
-import Anuncio from "../components/Anuncio.vue";
 import Content from "../components/Content.vue";
 import Cookie from "../components/Cookie.vue";
+import Destaques from "../components/Destaques.vue";
 import Filter from "../components/Filter.vue";
 
 </script>
 
 <template>
   <main>
-    <Anuncio />
+    <Destaques />
     <Filter />
     <Content />
     <Cookie />

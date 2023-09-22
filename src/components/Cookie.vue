@@ -39,7 +39,6 @@ function fecharPagina() {
     justify-content: flex-start;
     padding: 20px;
     height: auto;
-    margin-bottom: 40px;
 }
 
 .box-cookie {
