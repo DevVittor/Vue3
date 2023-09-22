@@ -138,7 +138,7 @@ const fotos = ref([
 
 @media screen and (max-width:640px) {
     .slide img {
-        height: 200px;
+        height: 250px;
     }
 }
 </style>
