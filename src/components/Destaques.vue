@@ -88,7 +88,7 @@ const fotos = ref([
     gap: 10px;
 }
 
-.slide:hover {
+.slide img:hover {
     cursor: pointer;
 }
 
@@ -98,6 +98,7 @@ const fotos = ref([
     min-width: 100px;
     width: auto;
     max-width: 600px;
+    border-radius: 5px;
 }
 
 /*.slide img {
@@ -115,7 +116,7 @@ const fotos = ref([
     pointer-events: none;
 }*/
 
-div:hover {
+.slider-track:hover {
     animation-play-state: paused;
 }
 
@@ -133,5 +134,11 @@ div:hover {
     animation: scroll 30s linear infinite;
     display: flex;
     width: 960px;
+}
+
+@media screen and (max-width:375px) {
+    .slide img {
+        height: 250px;
+    }
 }
 </style>
