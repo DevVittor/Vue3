@@ -59,9 +59,9 @@ const fotos = ref([
     <section>
         <div class="slider">
             <div class="slider-track">
-                <div class="slide" v-for="itens in fotos">
+                <div class="slide" v-for="(itens, index) in  fotos " :key="index">
                     <RouterLink to="/2">
-                        <img :src="itens" alt="">
+                        <img :src="itens" :alt="'Imagem' + index">
                     </RouterLink>
                 </div>
             </div>
@@ -88,6 +88,12 @@ const fotos = ref([
     gap: 10px;
 }
 
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .slide img:hover {
     cursor: pointer;
 }
@@ -100,21 +106,6 @@ const fotos = ref([
     max-width: 600px;
     border-radius: 5px;
 }
-
-/*.slide img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.slide li {
-    min-width: 100px;
-    width: auto;
-    max-width: 300px;
-    text-align: center;
-    pointer-events: none;
-}*/
 
 .slider-track:hover {
     animation-play-state: paused;
@@ -132,6 +123,7 @@ const fotos = ref([
 
 .slider-track {
     animation: scroll 30s linear infinite;
+    animation-delay: -30s;
     display: flex;
     width: 960px;
 }
@@ -139,6 +131,10 @@ const fotos = ref([
 @media screen and (max-width:640px) {
     .slide img {
         height: 250px;
+    }
+
+    .slider-track {
+        width: 100%;
     }
 }
 </style>

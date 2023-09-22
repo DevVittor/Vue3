@@ -178,7 +178,6 @@
     align-items: center;
 }
 
-.slide,
 .slide ul {
     display: flex;
     justify-content: center;
