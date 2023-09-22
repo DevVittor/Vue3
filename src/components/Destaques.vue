@@ -54,12 +54,16 @@ const fotos = ref([
     "https://images.pexels.com/photos/8258910/pexels-photo-8258910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/14354554/pexels-photo-14354554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 ]);
+
+let qtdeImg = fotos.value.length;
+const calcWidth = `calc(100% * ${qtdeImg})`;
+const animationDuration = `${qtdeImg * 5}s`;
 </script>
 <template>
     <section>
         <div class="slider">
-            <div class="slider-track">
-                <div class="slide" v-for="(itens, index) in  fotos " :key="index">
+            <div class="slider-track" :style="{ width: calcWidth, animationDuration }">
+                <div class="slide " v-for="(itens, index) in  fotos " :key="index">
                     <RouterLink to="/2">
                         <img :src="itens" :alt="'Imagem' + index">
                     </RouterLink>
@@ -122,10 +126,11 @@ const fotos = ref([
 }
 
 .slider-track {
-    animation: scroll 30s linear infinite;
+    animation: scroll linear infinite;
     animation-delay: -30s;
     display: flex;
     width: 960px;
+    /*width: calc(100% * 18);*/
 }
 
 @media screen and (max-width:640px) {
