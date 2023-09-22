@@ -127,10 +127,10 @@ const animationDuration = `${qtdeImg * 5}s`;
 
 .slider-track {
     animation: scroll linear infinite;
-    animation-delay: -30s;
+
+    transition: transform 1s ease;
     display: flex;
     width: 960px;
-    /*width: calc(100% * 18);*/
 }
 
 @media screen and (max-width:640px) {
