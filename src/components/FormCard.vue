@@ -1,27 +1,52 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
-let ImagemAtual = "https://images.pexels.com/photos/15488686/pexels-photo-15488686/free-photo-of-carro-veiculo-automovel-arranjo-de-flores.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
 let Nome = ref("Nome Completo");
 let Idade = ref("Idade");
 let Estado = ref("Estado");
-let Cidade = ref("Rj");
 let Valor = ref("Valor");
 let Sexo = ref("Sexo");
+
+
+const pictureImageTxt = ref("Choose an image");
+const selectedImage = ref("https://images.pexels.com/photos/10152557/pexels-photo-10152557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+
+function handleFileChange(e) {
+    const inputTarget = e.target;
+    const file = inputTarget.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.addEventListener("load", (e) => {
+            const readerTarget = e.target;
+            selectedImage.value = readerTarget.result; // Atualize selectedImage diretamente
+        });
+
+        reader.readAsDataURL(file);
+    } else {
+        selectedImage.value = "https://images.pexels.com/photos/10152557/pexels-photo-10152557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; // Atualize selectedImage diretamente
+    }
+}
+
 
 </script>
 <template>
     <main>
         <section>
             <div class="flex gap-3 justify-center items-start">
-                <div class="flex justify-center items-center">
-                    <div class="box-form">
+                <div class="flex justify-center items-start h-auto">
+                    <div class="box-form ">
                         <form action="" method="post">
-                            <div class="flex flex-col gap-3">
-                                <div>
-                                    <label class="input_file" for="arquivo"><i
-                                            class="pr-1.5 ri-upload-cloud-fill"></i>Enviar Foto</label>
-                                    <input type="file" name="arquivo" id="fileInput" @change="handleFileChange">
+                            <div class="flex flex-col gap-3 h-auto">
+                                <div class="h-[40px] pb-[45px] pt-3 w-full">
+                                    <label class="picture" for="picture__input" tabindex="0">
+
+                                        <span class="picture__image"><i class="pr-1.5 ri-upload-cloud-fill"></i>{{
+                                            pictureImageTxt }}</span>
+                                    </label>
+                                    <input class="" id="picture__input" name="picture__input" type="file" accept="image/*"
+                                        @change="handleFileChange">
                                 </div>
                                 <input class="border-[1px] border-[#ddd] p-[5px]" type="text" name="" id="inputName"
                                     placeholder="Nome Completo" v-model="Nome">
@@ -43,7 +68,7 @@ let Sexo = ref("Sexo");
                 </div>
                 <div class="container-card">
                     <div class="box-result-form">
-                        <img :src="ImagemAtual" alt="">
+                        <img class="h-[400px] w-[200px] object-cover" v-if="selectedImage" :src="selectedImage" alt="">
                         <div class="absolute h-[500px] w-[320px] flex flex-col justify-between items-center">
                             <div class="h[200px] w-full flex justify-end">
                                 <h2 class="text-white bg-blue-500 pr-[10px] pl-[10px] pt-[3px] pb-[3px] font-semibold ">
@@ -105,9 +130,18 @@ main {
     padding: 20px 0;
 }
 
-#fileInput {
-    display: flex;
-    flex-direction: column;
+.picture {
+    padding: 20px 40px;
+    border: 1px dashed currentcolor;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: white;
+}
+
+#picture__input {
+    display: none;
 }
 
 .container-card {
