@@ -23,7 +23,7 @@ onMounted(() => {
     <div class="container-card">
       <div class="box-card">
         <div class="card" v-for="items in urlFotos">
-          <RouterLink to="/2">
+          <RouterLink :to="{ path: '/2' }">
             <img class="h-full w-full object-cover pointer-events-none" :src="items" alt="Imagem">
           </RouterLink>
         </div>
@@ -47,7 +47,6 @@ onMounted(() => {
   gap: 5px;
   height: auto;
   width: 100%;
-  padding-bottom: 60px;
 }
 
 .card {

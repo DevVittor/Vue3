@@ -29,6 +29,9 @@ const router = createRouter({
             component:()=>import('../pages/Acessar.vue')
         },
 
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) {
+        return {top:0}
+    }
 })
 export default router;

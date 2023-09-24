@@ -1,6 +1,5 @@
 <script setup>
-import { ref } from 'vue';
-import { RouterLink } from 'vue-router';
+import { ref, onMounted } from 'vue';
 const fotos = ref([
     "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/3290060/pexels-photo-3290060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -13,88 +12,55 @@ const fotos = ref([
     "https://images.pexels.com/photos/11942868/pexels-photo-11942868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 ]);
+
+let currentIndex = 0;
+
+const maxImg = fotos.value.length;
+
+const currentImage = ref(fotos.value[currentIndex]);
+
+onMounted(() => {
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % maxImg;
+        currentImage.value = fotos.value[currentIndex];
+    }, 5000);
+});
+
 </script>
 <template>
     <section>
-        <div class="slider">
-            <div class="slider-track">
-                <div class="slide" v-for="(itens, index) in  fotos " :key="index">
-                    <RouterLink to="/2">
-                        <img :src="itens" :alt="'Imagem' + index">
-                    </RouterLink>
-                </div>
+        <div class="container">
+            <div class="box">
+                <img :src="currentImage">
             </div>
         </div>
     </section>
 </template>
 <style scoped>
-.slider {
-    position: relative;
-    overflow: hidden;
-    height: auto;
+section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
     width: 100%;
-    margin: auto;
 }
 
-.slider-track {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.slide {
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.slide img:hover {
-    cursor: pointer;
-}
-
-.slide img {
+.box img {
     height: 350px;
+    width: 100%;
     object-fit: cover;
-    min-width: 100px;
-    width: auto;
-    max-width: 600px;
-    border-radius: 5px;
-}
-
-.slider-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes scroll {
-    from {
-        transform: translateX(0px);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.slider-track {
-    animation-name: scroll;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    display: flex;
-    width: 960px;
-}
-
-@media screen and (max-width:640px) {
-    .slide img {
-        height: 250px;
-    }
-
-    .slider-track {
-        width: 100%;
-    }
+    border-radius: 12px;
 }
 </style>

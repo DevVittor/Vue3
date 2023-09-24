@@ -1,17 +1,20 @@
 <script setup>
 import Content from "../components/Content.vue";
 import Cookie from "../components/Cookie.vue";
-import Destaques from "../components/Destaques.vue";
 import Filter from "../components/Filter.vue";
+import Anuncio from "../components/Anuncio.vue";
+import FormCard from "../components/FormCard.vue";
 
 </script>
 
 <template>
   <main>
-    <Destaques />
+    <FormCard />
+    <!--
+    <Anuncio />
     <Filter />
     <Content />
-    <Cookie />
+    <Cookie />-->
   </main>
 </template>
 <style scoped></style>
