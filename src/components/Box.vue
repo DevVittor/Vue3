@@ -137,13 +137,6 @@ import Services from './Services.vue';
 }
 
 
-@media screen and (max-width:1600px) {
-    .container-profile {
-        flex-wrap: wrap;
-        flex-direction: column;
-    }
-}
-
 @media screen and (max-width: 900px) {
     .box-profile {
         justify-content: center;

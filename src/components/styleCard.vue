@@ -1,6 +1,6 @@
 <script setup>
-import axios from "axios";
-import { ref, watch } from 'vue';
+//import axios from "axios";
+import { ref } from 'vue';
 
 const fotos = ref([
     "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -59,7 +59,6 @@ let modal = ref(false);
 let imgModal = ref('');
 let indexModal = ref('');
 let scrollModal = document.body.style.overflow;
-scroll = 'auto';
 function modalImg(imagem, index) {
     /*const clickImg = event.target;
     const imgModal = clickImg.src;
@@ -69,6 +68,7 @@ function modalImg(imagem, index) {
     indexModal.value = index;
     modal.value = true;
     scrollModal = 'hidden';
+    console.log(modal);
 }
 
 function closeModalImg() {
@@ -100,7 +100,7 @@ watch(modal, (newValue) => {
     <section v-if="modal">
         <div class="container-modal">
             <div class="box-modal">
-                <button @click="closeModalImg" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md"><i
+                <button @click="closeModalImg" class="bg-blue-500 text-white rounded-md"><i
                         class="pr-1.5 ri-close-fill"></i>Fechar</button>
                 <img :src="imgModal" :alt="indexModal">
             </div>
