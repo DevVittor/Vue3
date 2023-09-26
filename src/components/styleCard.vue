@@ -1,6 +1,6 @@
 <script setup>
 //import axios from "axios";
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 const fotos = ref([
     "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -55,20 +55,15 @@ const fotos = ref([
     "https://images.pexels.com/photos/8258910/pexels-photo-8258910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/14354554/pexels-photo-14354554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 ]);
+
 let modal = ref(false);
 let imgModal = ref('');
 let indexModal = ref('');
-let scrollModal = document.body.style.overflow;
 function modalImg(imagem, index) {
-    /*const clickImg = event.target;
-    const imgModal = clickImg.src;
-    const altModal = clickImg.alt;*/
-
     imgModal.value = imagem;
     indexModal.value = index;
     modal.value = true;
-    scrollModal = 'hidden';
-    console.log(modal);
+    document.body.style.overflow = 'hidden';
 }
 
 function closeModalImg() {
@@ -77,22 +72,24 @@ function closeModalImg() {
 
 watch(modal, (newValue) => {
     if (!newValue) {
-        scrollModal = 'auto';
+        document.body.style.overflow = 'auto';
     }
 });
 
 /*axios.get('http://localhost:8080/')
     .then(res => {
         fotos.value = res.data.fotos;
-    }).catch(error => console.error(error));*/
+    }).catch(error => console.error(error));
+*/
+
 
 </script>
 <template>
     <section>
         <div className="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
             <div v-for="(imagens, index) in fotos" className="mb-2.5 w-full break-inside-avoid">
-                <img @click="modalImg(imagens, index)" className="max-w-full cursor-pointer rounded-md pointer-events-none"
-                    :src="imagens" :alt="index" />
+                <img @click="modalImg(imagens, index)" className="max-w-full cursor-pointer rounded-md" :src="imagens"
+                    :alt="index" />
 
             </div>
         </div>

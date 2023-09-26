@@ -11,7 +11,6 @@ import Services from './Services.vue';
         </section>
         <section>
             <div class="container-profile">
-
                 <div class="box-profile">
                     <div class="box-check">
                         <button class=""><i class="ri-shield-check-fill"></i>Perfil Verificado</button>
