@@ -59,6 +59,7 @@ const fotos = ref([
 let modal = ref(false);
 let imgModal = ref('');
 let indexModal = ref('');
+
 function modalImg(imagem, index) {
     imgModal.value = imagem;
     indexModal.value = index;
@@ -86,11 +87,10 @@ watch(modal, (newValue) => {
 </script>
 <template>
     <section>
-        <div className="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
-            <div v-for="(imagens, index) in fotos" className="mb-2.5 w-full break-inside-avoid">
-                <img @click="modalImg(imagens, index)" className="max-w-full cursor-pointer rounded-md" :src="imagens"
+        <div class="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
+            <div v-for="(imagens, index) in fotos" class="mb-2.5 w-full break-inside-avoid">
+                <img @click="modalImg(imagens, index)" class="max-w-full cursor-pointer rounded-md" :src="imagens"
                     :alt="index" />
-
             </div>
         </div>
     </section>
@@ -109,7 +109,7 @@ watch(modal, (newValue) => {
     inset: 0;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     backdrop-filter: blur(8px);
 }
 
@@ -136,7 +136,8 @@ watch(modal, (newValue) => {
 
 
 .box-modal img {
-    height: 100%;
+    pointer-events: none;
+    height: 90%;
     width: 100%;
     object-fit: cover;
     border-radius: 5px;

@@ -135,6 +135,11 @@ import Services from './Services.vue';
     gap: 10px;
 }
 
+@media screen and (max-width:1720px) {
+    .container-profile {
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width: 900px) {
     .box-profile {

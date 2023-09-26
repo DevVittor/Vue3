@@ -17,11 +17,11 @@ import { RouterLink } from "vue-router";
         <!--<RouterLink to="/box">Perfil</RouterLink>-->
       </div>
       <div class="flex items-center gap-3">
-        <button class="border-[1px] border-white pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]">
-          <RouterLink :to="{ path: '/acessar' }" class="text-white">Acessar</RouterLink>
+        <button class="bg-white pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]">
+          <RouterLink :to="{ path: '/acessar' }" class="text-black">Acessar</RouterLink>
         </button>
         <button
-          class="bg-[#FE0000] text-white border-[1px] border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]">
+          class="bg-[#FE0000] text-white border-[1px] md border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]">
           <RouterLink :to="{ path: '/register' }">Conta Gratuita</RouterLink>
         </button>
       </div>
@@ -31,6 +31,12 @@ import { RouterLink } from "vue-router";
   </header>
 </template>
 <style scoped>
+@media screen and (max-width: 1540px) {
+  .container-menu {
+    padding: 10px 40px;
+  }
+}
+
 @media screen and (max-width:740px) {
   .container-menu {
     flex-direction: column;
