@@ -97,8 +97,7 @@ watch(modal, (newValue) => {
     <section v-if="modal">
         <div class="container-modal">
             <div class="box-modal">
-                <button @click="closeModalImg" class="bg-blue-500 text-white rounded-md"><i
-                        class="pr-1.5 ri-close-fill"></i>Fechar</button>
+                <button @click="closeModalImg" class=" text-white"><i class="pr-1.5 ri-close-fill"></i>Fechar</button>
                 <img :src="imgModal" :alt="indexModal">
             </div>
         </div>
@@ -110,16 +109,19 @@ watch(modal, (newValue) => {
     inset: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     backdrop-filter: blur(8px);
 }
 
 .box-modal {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
     gap: 10px;
     padding: 10px;
+    height: 85%;
 }
 
 .box-modal button {
@@ -128,7 +130,10 @@ watch(modal, (newValue) => {
     background: red;
     font-size: 16px;
     font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 3px;
 }
+
 
 .box-modal img {
     height: 100%;
@@ -138,8 +143,9 @@ watch(modal, (newValue) => {
 }
 
 @media screen and (max-width:500px) {
-    .box-modal {
-        height: 400px;
+    .box-modal img {
+        height: auto;
+        max-height: 400px;
     }
 }
 </style>
