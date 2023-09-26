@@ -90,4 +90,24 @@ import { RouterLink } from 'vue-router';
     outline: none;
     border-radius: 3px;
 }
+
+@media screen and (max-width:660px) {
+    .container-acessar {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .box-image {
+        display: none;
+    }
+
+    .box-acessar {
+        border-radius: 5px;
+    }
+}
 </style>
