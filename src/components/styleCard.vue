@@ -55,6 +55,26 @@ const fotos = ref([
     "https://images.pexels.com/photos/8258910/pexels-photo-8258910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://images.pexels.com/photos/14354554/pexels-photo-14354554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
 ]);
+let modal = ref(false);
+let imgModal = ref('');
+let indexModal = ref('');
+function modalImg(imagem, index) {
+    /*const clickImg = event.target;
+
+    const imgModal = clickImg.src;
+    const altModal = clickImg.alt;*/
+
+    imgModal.value = imagem;
+    indexModal.value = index;
+    modal.value = true;
+    document.body.style.overflow = 'hidden';
+    console.log(imgModal, altModal);
+}
+
+function closeModalImg() {
+    modal.value = false;
+    document.body.style.overflow = 'auto';
+}
 
 /*axios.get('http://localhost:8080/')
     .then(res => {
@@ -65,9 +85,58 @@ const fotos = ref([
 <template>
     <section>
         <div className="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
-            <div v-for="imagens in fotos" className="mb-2.5 w-full break-inside-avoid">
-                <img className="max-w-full rounded-md" :src="imagens" alt="" />
+            <div v-for="(imagens, index) in fotos" className="mb-2.5 w-full break-inside-avoid">
+                <img @click="modalImg(imagens, index)" className="max-w-full rounded-md" :src="imagens" :alt="index" />
+
+            </div>
+        </div>
+    </section>
+    <section v-if="modal">
+        <div class="container-modal">
+            <div class="box-modal">
+                <button @click="closeModalImg" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md"><i
+                        class="pr-1.5 ri-close-fill"></i>Fechar</button>
+                <img :src="imgModal" :alt="indexModal">
             </div>
         </div>
     </section>
 </template>
+<style scoped>
+.container-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px);
+}
+
+.box-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    padding: 10px;
+}
+
+.box-modal button {
+    height: 40px;
+    width: auto;
+    background: red;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.box-modal img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:500px) {
+    .box-modal {
+        height: 400px;
+    }
+}
+</style>

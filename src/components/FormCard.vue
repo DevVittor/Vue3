@@ -7,17 +7,15 @@ let Estado = ref("Estado");
 let Valor = ref("Valor");
 let Sexo = ref("Sexo");
 
-
 const pictureImageTxt = ref("Choose an image");
 const selectedImage = ref("https://images.pexels.com/photos/10152557/pexels-photo-10152557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 
-function handleFileChange(e) {
+const handleFileChange = (e) => {
+
     const inputTarget = e.target;
     const file = inputTarget.files[0];
-
     if (file) {
         const reader = new FileReader();
-
         reader.addEventListener("load", (e) => {
             const readerTarget = e.target;
             selectedImage.value = readerTarget.result; // Atualize selectedImage diretamente
@@ -28,7 +26,6 @@ function handleFileChange(e) {
         selectedImage.value = "https://images.pexels.com/photos/10152557/pexels-photo-10152557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"; // Atualize selectedImage diretamente
     }
 }
-
 
 </script>
 <template>
@@ -41,7 +38,6 @@ function handleFileChange(e) {
                             <div class="flex flex-col gap-3 h-auto">
                                 <div class="h-[40px] pb-[45px] pt-3 w-full">
                                     <label class="picture" for="picture__input" tabindex="0">
-
                                         <span class="picture__image"><i class="pr-1.5 ri-upload-cloud-fill"></i>{{
                                             pictureImageTxt }}</span>
                                     </label>
