@@ -77,7 +77,6 @@ function closeModalImg() {
 
 watch(modal, (newValue) => {
     if (!newValue) {
-        // Restaura o scroll para "auto" quando o modal é fechado
         scrollModal = 'auto';
     }
 });
@@ -92,8 +91,8 @@ watch(modal, (newValue) => {
     <section>
         <div className="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
             <div v-for="(imagens, index) in fotos" className="mb-2.5 w-full break-inside-avoid">
-                <img @click="modalImg(imagens, index)" className="max-w-full rounded-md pointer-events-none" :src="imagens"
-                    :alt="index" />
+                <img @click="modalImg(imagens, index)" className="max-w-full cursor-pointer rounded-md pointer-events-none"
+                    :src="imagens" :alt="index" />
 
             </div>
         </div>

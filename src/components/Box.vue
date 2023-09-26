@@ -132,7 +132,7 @@ import Services from './Services.vue';
 
 .box-name-image {
     display: flex;
-    align-items: cenrgb(155, 153, 153);
+    align-items: center;
     gap: 10px;
 }
 
