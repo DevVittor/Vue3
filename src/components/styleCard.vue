@@ -1,6 +1,6 @@
 <script setup>
 import axios from "axios";
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 const fotos = ref([
     "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -58,23 +58,29 @@ const fotos = ref([
 let modal = ref(false);
 let imgModal = ref('');
 let indexModal = ref('');
+let scrollModal = document.body.style.overflow;
+scroll = 'auto';
 function modalImg(imagem, index) {
     /*const clickImg = event.target;
-
     const imgModal = clickImg.src;
     const altModal = clickImg.alt;*/
 
     imgModal.value = imagem;
     indexModal.value = index;
     modal.value = true;
-    document.body.style.overflow = 'hidden';
-    console.log(imgModal, altModal);
+    scrollModal = 'hidden';
 }
 
 function closeModalImg() {
     modal.value = false;
-    document.body.style.overflow = 'auto';
 }
+
+watch(modal, (newValue) => {
+    if (!newValue) {
+        // Restaura o scroll para "auto" quando o modal é fechado
+        scrollModal = 'auto';
+    }
+});
 
 /*axios.get('http://localhost:8080/')
     .then(res => {
@@ -86,7 +92,8 @@ function closeModalImg() {
     <section>
         <div className="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
             <div v-for="(imagens, index) in fotos" className="mb-2.5 w-full break-inside-avoid">
-                <img @click="modalImg(imagens, index)" className="max-w-full rounded-md" :src="imagens" :alt="index" />
+                <img @click="modalImg(imagens, index)" className="max-w-full rounded-md pointer-events-none" :src="imagens"
+                    :alt="index" />
 
             </div>
         </div>

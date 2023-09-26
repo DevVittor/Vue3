@@ -136,6 +136,47 @@ import Services from './Services.vue';
     gap: 10px;
 }
 
+
+@media screen and (max-width:1600px) {
+    .container-profile {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .box-profile {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .box-description-profile {
+        width: 100%;
+    }
+
+    .box-description-profile p {
+        text-align: center;
+    }
+
+    .container-btns-profile {
+        justify-content: center;
+    }
+
+    .option-profile {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box-option-profile {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width:640px) {
     .container-profile {
         flex-wrap: wrap;
