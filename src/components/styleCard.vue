@@ -95,7 +95,7 @@ function closeModalImg() {
         <div class="container-modal">
             <div class="box-modal">
                 <button @click="closeModalImg" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md"><i
-                        class="ri-close-fill"></i></button>
+                        class="pr-1.5 ri-close-fill"></i>Fechar</button>
                 <img :src="imgModal" :alt="indexModal">
             </div>
         </div>
