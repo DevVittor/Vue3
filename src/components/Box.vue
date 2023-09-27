@@ -2,12 +2,21 @@
 import { RouterLink } from 'vue-router';
 import StyleCard from './styleCard.vue';
 import Services from './Services.vue';
+import ListService from './ListService.vue';
+
+function btnBack() {
+    history.back();
+}
 
 </script>
 <template>
     <main>
         <section>
-            <Services />
+            <button class="pr-[10px] pb-[3px] pt-[3px] pl-[10px] rounded-[3px] font-semibold m-4 bg-white"
+                @click="btnBack"><i class="pr-1.5 ri-corner-up-left-line"></i>Voltar</button>
+        </section>
+        <section>
+            <ListService />
         </section>
         <section>
             <div class="container-profile">
