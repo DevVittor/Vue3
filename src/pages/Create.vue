@@ -1,6 +1,6 @@
 <script setup>
-import TypeAccount from '../components/TypeAccount.vue';
 import { ref, onMounted } from 'vue';
+import Anuncio from '../components/Anuncio.vue';
 
 const gen = ref([]);
 const years = ref([]);
@@ -9,7 +9,7 @@ const month = ref([]);
 
 const gens = () => {
   gen.value = ["Mulher", "Homem", "Trans"];
-}
+};
 
 const fillYearSelect = () => {
   const currentYear = new Date().getFullYear();
@@ -22,13 +22,13 @@ const monthSelect = () => {
   for (let months = 1; months <= 12; months++) {
     month.value.push(months);
   }
-}
+};
+
 const daySelect = () => {
   for (let days = 1; days <= 31; days++) {
     day.value.push(days);
   }
-}
-
+};
 
 onMounted(() => {
   fillYearSelect();
@@ -36,11 +36,12 @@ onMounted(() => {
   daySelect();
   gens();
 });
+
 </script>
 <template>
   <main>
     <section>
-      <TypeAccount />
+      <Anuncio />
     </section>
     <section>
       <div class="container-form">
@@ -56,21 +57,6 @@ onMounted(() => {
               Sobrenome:
             </label>
             <input type="text" name="" id="" placeholder="Digite seu sobrenome">
-          </div>
-          <div class="form-email">
-            <label for="">
-              Email:
-            </label>
-            <input type="text" name="" id="" placeholder="Digite seu email">
-          </div>
-          <div class="form-gen flex flex-col gap-[5px]">
-            <label for="">
-              Gênero:
-            </label>
-            <select name="" id="">
-              <option value="" selected disabled hidden>Escolha seu Gênero</option>
-              <option v-for="listGen in gen" :value="gen">{{ listGen }}</option>
-            </select>
           </div>
           <div class="form-nascimento">
             <label for="">
@@ -90,6 +76,35 @@ onMounted(() => {
               </select>
             </div>
           </div>
+          <div class="form-email">
+            <label for="">
+              Email:
+            </label>
+            <input type="text" name="" id="" placeholder="Digite seu email">
+          </div>
+          <div class="form-email">
+            <label for="">
+              Password:
+            </label>
+            <input type="password" name="" id="" placeholder="******">
+          </div>
+          <div class="form-email">
+            <label for="">
+              Confirm Password:
+            </label>
+            <input type="password" name="" id="" placeholder="******">
+          </div>
+        </div>
+        <div class="">
+          <div class="form-gen flex flex-col gap-[5px]">
+            <label for="">
+              Gênero:
+            </label>
+            <select name="" id="">
+              <option value="" selected disabled hidden>Escolha seu Gênero</option>
+              <option v-for="listGen in gen" :value="gen">{{ listGen }}</option>
+            </select>
+          </div>
         </div>
       </div>
     </section>
@@ -102,7 +117,6 @@ onMounted(() => {
   align-items: flex-start;
   padding: 10px 20px;
   gap: 10px;
-  background: #ddd;
 }
 
 .box-form {
@@ -177,5 +191,20 @@ onMounted(() => {
 .inputs-nascimento input {
   border-bottom: 1px solid #ddd;
   outline: none;
+}
+
+@media screen and (max-width:640px) {
+  .container-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .box-form {
+    width: 100%;
+    border-radius: 5px;
+  }
 }
 </style>

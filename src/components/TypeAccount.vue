@@ -3,13 +3,13 @@
 </script>
 <template>
     <div class="flex items-center justify-center p-[20px]">
-        <div class="flex justify-center items-center flex-col gap-10  text-white h-auto w-[800px]">
+        <div class=" flex justify-center items-center flex-col gap-10  text-white h-auto w-[800px]">
             <div class="">
                 <h2 class="text-[30px] font-semibold">Eu sou um(a)</h2>
             </div>
-            <div class="flex justify-center items-center gap-5">
+            <div class=" flex justify-center items-center gap-5">
                 <div class="flex flex-col justify-center items-center gap-3">
-                    <div class="cursor-pointer h-[200px] w-[200px] rounded-[12px] bg-red-500">
+                    <div class="box-account cursor-pointer h-[200px] w-[200px] rounded-[12px] bg-red-500">
                         <img class="h-full w-full object-cover rounded-[12px]"
                             src="https://images.pexels.com/photos/375902/pexels-photo-375902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             alt="">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-center items-center gap-3">
-                    <div class="cursor-pointer h-[200px] w-[200px] rounded-[12px] bg-red-500">
+                    <div class="box-account cursor-pointer h-[200px] w-[200px] rounded-[12px] bg-red-500">
                         <img class="h-full w-full object-cover rounded-[12px]"
                             src="https://images.pexels.com/photos/4576085/pexels-photo-4576085.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             alt="">
