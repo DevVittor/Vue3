@@ -1,5 +1,5 @@
 <script setup>
-import Entrar from '../components/Entrar.vue';
+import Entrar from "../components/Entrar.vue";
 </script>
 <template>
     <main>
