@@ -1,33 +1,32 @@
 <script setup></script>
 <template>
-  <div class="form-name">
-    <label for=""> Nome: </label>
-    <input type="text" name="" id="" placeholder="Digite seu nome" />
-  </div>
-  <div class="form-lastname">
-    <label for=""> Sobrenome: </label>
-    <input type="text" name="" id="" placeholder="Digite seu sobrenome" />
+  <div class="container-name">
+    <div class="form-name-lastname">
+      <label for=""> Nome: </label>
+      <input type="text" name="" id="" placeholder="Digite seu nome" />
+    </div>
+    <div class="form-name-lastname">
+      <label for=""> Sobrenome: </label>
+      <input type="text" name="" id="" placeholder="Digite seu sobrenome" />
+    </div>
   </div>
 </template>
 <style scoped>
-.form-name {
+.container-name {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-
-.form-name input {
-  border-bottom: 1px solid #ddd;
-  outline: none;
-}
-.form-lastname {
+.form-name-lastname {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  gap: 10px;
 }
-
-.form-lastname input {
-  border-bottom: 1px solid #ddd;
+.form-name-lastname input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
   outline: none;
+  padding: 3px 10px;
 }
 </style>

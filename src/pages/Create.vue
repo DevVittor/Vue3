@@ -22,16 +22,26 @@ import formHorarios from "../components/form/registerAcomp/formHorarios.vue";
 import formSobre from "../components/form/registerAcomp/formSobre.vue";
 import formEstado from "../components/form/registerAcomp/formEstado.vue";
 import formContact from "../components/form/registerAcomp/formContact.vue";
+import formPagamento from "../components/form/registerAcomp/formPagamento.vue";
+import formSocial from "../components/form/registerAcomp/formSocial.vue";
 </script>
 <template>
   <main>
     <section>
       <div class="container-form">
         <div class="box-form">
-          <formName />
-          <formNascimento />
-          <formEmail />
-          <formPassword />
+          <div class="box-register">
+            <h2>Criar Conta</h2>
+            <formEmail />
+            <formPassword />
+          </div>
+          <div class="box-info">
+            <h2>Dados Pessoais</h2>
+            <formName />
+            <formNascimento />
+            <formContact />
+          </div>
+
           <formGen />
           <formBody />
           <formPeso />
@@ -50,7 +60,8 @@ import formContact from "../components/form/registerAcomp/formContact.vue";
           <formHorarios />
           <formSobre />
           <formEstado />
-          <formContact />
+          <formPagamento />
+          <formSocial />
 
           <div class="">
             <input
@@ -73,7 +84,6 @@ import formContact from "../components/form/registerAcomp/formContact.vue";
   gap: 10px;
   width: 100%;
 }
-
 .box-form {
   display: flex;
   justify-content: center;
@@ -84,7 +94,30 @@ import formContact from "../components/form/registerAcomp/formContact.vue";
   width: 40%;
   border-radius: 5px;
 }
-
+.box-register {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.box-register h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.box-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100%;
+  gap: 10px;
+}
+.box-info h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
 @media screen and (max-width: 640px) {
   .container-form {
     flex-direction: column;

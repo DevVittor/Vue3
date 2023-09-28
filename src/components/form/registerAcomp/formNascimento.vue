@@ -1,49 +1,46 @@
 <script setup>
-import { ref, onMounted } from "vue";
-const years = ref([]);
-const day = ref([]);
-const month = ref([]);
-const fillYearSelect = () => {
-  const currentYear = new Date().getFullYear();
-  for (let year = currentYear; year >= currentYear - 100; year--) {
-    years.value.push(year);
-  }
-};
+import { ref } from "vue";
 
-const monthSelect = () => {
-  for (let months = 1; months <= 12; months++) {
-    month.value.push(months);
-  }
-};
+const inputDate = ref("");
+const formattedDate = ref("");
 
-const daySelect = () => {
-  for (let days = 1; days <= 31; days++) {
-    day.value.push(days);
-  }
+const onDateInput = (event) => {
+  inputDate.value = event.target.value;
+  formattedDate.value = formatToBrazilianDate(inputDate.value);
 };
+const formatToBrazilianDate = (dateString) => {
+  if (!dateString) {
+    return "";
+  }
 
-onMounted(() => {
-  fillYearSelect();
-  monthSelect();
-  daySelect();
-});
+  const [year, month, day] = dateString.split("-");
+  return `${day}/${month}/${year}`;
+};
 </script>
 <template>
-  <div class="form-nascimento">
-    <label for=""> Data de nascimento: </label>
-    <div class="inputs-nascimento">
-      <select name="" id="">
-        <option v-for="days in day" :value="day">{{ days }}</option>
-      </select>
-      <span>/</span>
-      <select name="" id="">
-        <option v-for="months in month" :value="month">{{ months }}</option>
-      </select>
-      <span>/</span>
-      <select name="" id="">
-        <option v-for="year in years" :value="year">{{ year }}</option>
-      </select>
-    </div>
+  <div class="container-nascimento">
+    <label for="date"> Data de nascimento: </label>
+    <input v-model="inputDate" id="date" type="date" @input="onDateInput" />
+    <p>Data Atual: {{ formattedDate }}</p>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.container-nascimento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.select-nascimento {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.select-nascimento select {
+  text-align: center;
+  padding: 3px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #ddd;
+  background: white;
+}
+</style>
