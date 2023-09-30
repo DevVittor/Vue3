@@ -175,7 +175,9 @@ onMounted(() => {
                         <label><input type="checkbox" /> Homem </label>
                         <label><input type="checkbox" /> Trans </label>
                         <label><input type="checkbox" /> Casal </label>
-                        <label><input type="checkbox" /> Deficiente </label>
+                        <label
+                            ><input type="checkbox" /> Deficiente Físico</label
+                        >
                     </div>
                 </div>
                 <div class="box-input flex-col">
@@ -194,7 +196,11 @@ onMounted(() => {
                 <div class="box-input flex-col">
                     <h2>Preço Hora:</h2>
                     <div class="flex items-center gap-[10px]">
-                        <input type="text" placeholder="Valor/Hora" />
+                        <label>1 Hora <input type="number" /></label>
+                        <label>3 Hora <input type="number" /></label>
+                        <label>6 Hora <input type="number" /></label>
+                        <label>12 Hora <input type="number" /></label>
+                        <label>Pernoite <input type="number" min="30" /></label>
                     </div>
                 </div>
                 <div class="box-input flex-col">
