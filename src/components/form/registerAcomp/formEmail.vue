@@ -1,20 +1,28 @@
 <script setup></script>
 <template>
-  <div class="form-email">
-    <label for=""> Email: </label>
-    <input type="email" name="" id="" placeholder="Digite seu email" />
+  <div class="container-email">
+    <label for="">Email: </label>
+    <div class="box-email">
+      <input type="email" name="" id="" placeholder="Digite seu email" />
+    </div>
   </div>
 </template>
 <style scoped>
-.form-email {
+.container-email {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 5px;
 }
-.form-email input[type="email"] {
-  padding: 3px 10px;
+.box-email {
+  display: flex;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 10px;
   border: 1px solid #ddd;
   border-radius: 3px;
+}
+.box-email input {
   outline: none;
 }
 </style>

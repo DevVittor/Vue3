@@ -1,7 +1,6 @@
 <script setup></script>
 <template>
   <div class="form-sobre">
-    <label for=""> Sobre: </label>
     <textarea
       name=""
       id=""

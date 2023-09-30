@@ -16,12 +16,13 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
+  width: 100%;
 }
 .form-name-lastname {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 5px;
 }
 .form-name-lastname input {
   border: 1px solid #ddd;

@@ -1,7 +1,6 @@
 <script setup></script>
 <template>
   <div class="form-Horarios">
-    <label for=""> Dias e Horários: </label>
     <div class="flex items-center gap-3">
       <select name="" id="">
         <option value="" selected disabled hidden>Segunda-feira</option>

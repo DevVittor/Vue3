@@ -47,8 +47,8 @@ function handleIcon2() {
 }
 .form-password {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 5px;
 }
 .row-password input {
   border: none;
@@ -56,8 +56,8 @@ function handleIcon2() {
 }
 .form-confirm-email {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  gap: 5px;
 }
 .row-password {
   border: 1px solid #ddd;

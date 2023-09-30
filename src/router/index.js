@@ -19,9 +19,9 @@ const router = createRouter({
             component: () => import("../components/Profile.vue"),
         },
         {
-            path: "/Register",
-            name: "Register",
-            component: () => import("../pages/Create.vue"),
+            path: "/publicar",
+            name: "Publicar",
+            component: () => import("../components/Publicar.vue"),
         },
         {
             path: "/acessar",

@@ -30,38 +30,71 @@ import formSocial from "../components/form/registerAcomp/formSocial.vue";
     <section>
       <div class="container-form">
         <div class="box-form">
-          <div class="box-register">
-            <h2>Criar Conta</h2>
-            <formEmail />
-            <formPassword />
-          </div>
           <div class="box-info">
             <h2>Dados Pessoais</h2>
             <formName />
-            <formNascimento />
-            <formContact />
+            <div class="flex justify-center items-center gap-[10px]">
+              <formNascimento />
+              <formContact />
+            </div>
+            <div class="container-gen-estado">
+              <formGen />
+              <formEstado />
+            </div>
           </div>
 
-          <formGen />
-          <formBody />
-          <formPeso />
-          <formHeight />
-          <formPeito />
-          <formAss />
-          <formTattoo />
-          <formOculosAparelho />
-          <formPelos />
-          <formEtnia />
-          <formPrice />
-          <formService />
-          <formSpecial />
-          <formAtendimento />
-          <formLocalAtendimento />
-          <formHorarios />
-          <formSobre />
-          <formEstado />
-          <formPagamento />
-          <formSocial />
+          <div class="container-body">
+            <h2>Corpo</h2>
+            <div class="box-body">
+              <formEtnia />
+              <formBody />
+              <formPeso />
+              <formHeight />
+              <formPeito />
+              <formAss />
+              <formPelos />
+              <formOculosAparelho />
+              <formTattoo />
+            </div>
+          </div>
+          <div class="container-service">
+            <h2>Serviços</h2>
+            <div class="box-service">
+              <formService />
+            </div>
+          </div>
+          <div class="container-service-especial">
+            <h2>Serviços Especiais</h2>
+            <div class="box-service-especial">
+              <formSpecial />
+            </div>
+          </div>
+          <div class="container-atendimento">
+            <h2>Atendimento</h2>
+            <div class="box-atendimento">
+              <formAtendimento />
+              <formLocalAtendimento />
+            </div>
+          </div>
+          <div class="container-horarios">
+            <h2>Dias e Horários</h2>
+            <div class="box-horarios">
+              <formHorarios />
+            </div>
+          </div>
+          <div class="container-horarios">
+            <h2>Pagamento</h2>
+            <div class="box-horarios">
+              <formPrice />
+              <formPagamento />
+            </div>
+          </div>
+          <div class="container-horarios">
+            <h2>Sobre</h2>
+            <div class="box-horarios">
+              <formSobre />
+            </div>
+          </div>
 
           <div class="">
             <input
@@ -79,28 +112,30 @@ import formSocial from "../components/form/registerAcomp/formSocial.vue";
 .container-form {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 10px;
   gap: 10px;
   width: 100%;
+  background: white;
 }
 .box-form {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 10px;
-  background: white;
-  width: 40%;
   border-radius: 5px;
 }
 .box-register {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
-  gap: 10px;
-  width: 100%;
+  gap: 5px;
+  width: auto;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background: white;
+  border: 1px solid #ddd;
 }
 .box-register h2 {
   font-size: 28px;
@@ -111,12 +146,76 @@ import formSocial from "../components/form/registerAcomp/formSocial.vue";
   flex-direction: column;
   flex-wrap: wrap;
   height: auto;
-  width: 100%;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background: white;
+  width: auto;
   gap: 10px;
+  border: 1px solid #ddd;
 }
 .box-info h2 {
   font-size: 28px;
   font-weight: 600;
+}
+.container-body {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.container-body h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.container-service {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.container-service h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.container-service-especial {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.container-service-especial h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.container-atendimento {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.container-atendimento h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.container-horarios {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.container-horarios h2 {
+  font-size: 28px;
+  font-weight: 600;
+}
+.container-gen-estado {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 @media screen and (max-width: 640px) {
   .container-form {
