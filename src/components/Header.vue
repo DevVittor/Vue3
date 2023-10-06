@@ -3,9 +3,7 @@ import { RouterLink } from "vue-router";
 //import IconProfile from "./iconProfile.vue";
 </script>
 <template>
-  <header
-    class="sticky top-0 z-50 border-b-[1px] border-gray-900 bg-black text-white"
-  >
+  <header class="sticky top-0 z-50 bg-black text-white">
     <div
       class="container-menu flex items-center sm:flex-row flex-col justify-between 2xl:pr-[50px] 2xl:p-[50px] pb-[20px] 2xl:pt-[10px] 2xl:pb-[10px]"
     >

@@ -1,6 +1,6 @@
 <script setup>
 //import axios from "axios";
-import { ref, watch } from 'vue';
+import { ref, watch } from "vue";
 
 const fotos = ref([
     "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -57,14 +57,14 @@ const fotos = ref([
 ]);
 
 let modal = ref(false);
-let imgModal = ref('');
-let indexModal = ref('');
+let imgModal = ref("");
+let indexModal = ref("");
 
 function modalImg(imagem, index) {
     imgModal.value = imagem;
     indexModal.value = index;
     modal.value = true;
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
 }
 
 function closeModalImg() {
@@ -73,7 +73,7 @@ function closeModalImg() {
 
 watch(modal, (newValue) => {
     if (!newValue) {
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = "auto";
     }
 });
 
@@ -82,23 +82,32 @@ watch(modal, (newValue) => {
         fotos.value = res.data.fotos;
     }).catch(error => console.error(error));
 */
-
-
 </script>
 <template>
     <section>
-        <div class="m-auto w-full 2xl:columns-6 lg:columns-4 columns-2 gap-2 p-2">
-            <div v-for="(imagens, index) in fotos" class="mb-2.5 w-full break-inside-avoid">
-                <img @click="modalImg(imagens, index)" class="max-w-full cursor-pointer rounded-md" :src="imagens"
-                    :alt="index" />
+        <div
+            class="m-auto w-[70%] 2xl:columns-4 lg:columns-4 columns-2 gap-2 pb-2 pr-2 pl-2 pt-0"
+        >
+            <div
+                v-for="(imagens, index) in fotos"
+                class="mb-2.5 w-full break-inside-avoid"
+            >
+                <img
+                    @click="modalImg(imagens, index)"
+                    class="max-w-full cursor-pointer rounded-md"
+                    :src="imagens"
+                    :alt="index"
+                />
             </div>
         </div>
     </section>
     <section v-if="modal">
         <div class="container-modal">
             <div class="box-modal">
-                <button @click="closeModalImg" class=" text-white"><i class="pr-1.5 ri-close-fill"></i>Fechar</button>
-                <img :src="imgModal" :alt="indexModal">
+                <button @click="closeModalImg" class="text-white">
+                    <i class="pr-1.5 ri-close-fill"></i>Fechar
+                </button>
+                <img :src="imgModal" :alt="indexModal" />
             </div>
         </div>
     </section>
@@ -134,7 +143,6 @@ watch(modal, (newValue) => {
     border-radius: 3px;
 }
 
-
 .box-modal img {
     pointer-events: none;
     height: 90%;
@@ -143,7 +151,7 @@ watch(modal, (newValue) => {
     border-radius: 5px;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
     .box-modal img {
         height: auto;
         max-height: 400px;

@@ -28,6 +28,11 @@ const router = createRouter({
             name: "Acessar",
             component: () => import("../pages/Acessar.vue"),
         },
+        {
+            path: "/model",
+            name: "Model",
+            component: () => import("../pages/Model.vue"),
+        },
     ],
     scrollBehavior(to, from, savedPosition) {
         return { top: 0 };
