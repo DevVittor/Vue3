@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { RouterLink } from "vue-router";
+import axios from "axios";
+const email = ref("");
+const senha = ref("");
 
 const alturaDaPagina = ref(window.innerHeight - 75 + "px");
 
@@ -10,6 +13,20 @@ onMounted(() => {
         alturaDaPagina.value = window.innerHeight - 75 + "px";
     });
 });
+
+function checarDados() {
+    const pegarDados = {
+        email: email.value,
+        senha: senha.value,
+    };
+
+    axios
+        .post("http://localhost:8080/acessar/ok", pegarDados)
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((error) => console.error(error));
+}
 </script>
 <template>
     <section>
@@ -21,48 +38,53 @@ onMounted(() => {
                 />
             </div>
             <div class="box-acessar">
-                <h2>Acessar Conta</h2>
-                <input
-                    type="email"
-                    name=""
-                    id=""
-                    placeholder="Email cadastrado"
-                />
-                <div class="acessar-password">
+                <form @submit="checarDados">
+                    <h2>Acessar Conta</h2>
+
                     <input
-                        type="password"
-                        name=""
+                        type="email"
+                        name="email"
+                        v-model="email"
                         id=""
-                        placeholder="************"
+                        placeholder="Email cadastrado"
                     />
-                    <label for="">
-                        <input type="checkbox" name="" id="" />
-                        Lembrar de mim
-                    </label>
-                </div>
-                <div class="pt-[8px]">
-                    <RouterLink
-                        class="hover:underline hover:delay-50 hover:text-blue-400"
-                        to="/"
-                        >Esqueceu a senha ?
-                    </RouterLink>
-                </div>
-                <div
-                    class="flex flex-col justify-center items-center gap-2 pt-3"
-                >
-                    <button
-                        class="bg-black text-white font-semibold pt-[5px] pb-[5px] pr-[10px] pl-[10px] rounded-[3px]"
-                        type="submit"
+                    <div class="acessar-password">
+                        <input
+                            type="password"
+                            name="senha"
+                            v-model="senha"
+                            id=""
+                            placeholder="************"
+                        />
+                        <label for="">
+                            <input type="checkbox" name="" id="" />
+                            Lembrar de mim
+                        </label>
+                    </div>
+                    <div class="pt-[8px]">
+                        <RouterLink
+                            class="hover:underline hover:delay-50 hover:text-blue-400"
+                            to="/"
+                            >Esqueceu a senha ?
+                        </RouterLink>
+                    </div>
+                    <div
+                        class="flex flex-col justify-center items-center gap-2 pt-3"
                     >
-                        Acessar Conta
-                    </button>
-                    <button
-                        class="bg-red-500 text-white font-semibold pt-[5px] pb-[5px] pr-[10px] pl-[10px] rounded-[3px]"
-                        type="submit"
-                    >
-                        Criar uma conta
-                    </button>
-                </div>
+                        <button
+                            class="bg-black text-white font-semibold pt-[5px] pb-[5px] pr-[10px] pl-[10px] rounded-[3px]"
+                            type="submit"
+                        >
+                            Acessar Conta
+                        </button>
+                        <button
+                            class="bg-red-500 text-white font-semibold pt-[5px] pb-[5px] pr-[10px] pl-[10px] rounded-[3px]"
+                            type="submit"
+                        >
+                            Criar uma conta
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

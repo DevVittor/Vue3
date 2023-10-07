@@ -5,7 +5,7 @@ const router = createRouter({
     routes: [
         {
             path: "/",
-            name: "home",
+            name: "Inicio",
             component: () => import("../pages/Home.vue"),
         },
         {
@@ -19,9 +19,9 @@ const router = createRouter({
             component: () => import("../components/Profile.vue"),
         },
         {
-            path: "/publicar",
-            name: "Publicar",
-            component: () => import("../components/Publicar.vue"),
+            path: "/cadastrar",
+            name: "Cadastrar",
+            component: () => import("../pages/Cadastrar.vue"),
         },
         {
             path: "/acessar",
@@ -32,6 +32,11 @@ const router = createRouter({
             path: "/model",
             name: "Model",
             component: () => import("../pages/Model.vue"),
+        },
+        {
+            path: "/:pathMatch(.*)*",
+            name: "error",
+            component: () => import("../pages/Error404.vue"),
         },
     ],
     scrollBehavior(to, from, savedPosition) {

@@ -24,7 +24,7 @@ import { RouterLink } from "vue-router";
         <button
           class="bg-[#FE0000] text-white border-[1px] md border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px]"
         >
-          <RouterLink :to="{ path: '/publicar' }">Conta Gratuita</RouterLink>
+          <RouterLink :to="{ path: '/cadastrar' }">Conta Gratuita</RouterLink>
         </button>
       </div>
       <!--<IconProfile />-->

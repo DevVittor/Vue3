@@ -2,6 +2,14 @@
 import profileCard from "../components/profileCard.vue";
 import Filter from "../components/Filter.vue";
 import { ref } from "vue";
+import axios from "axios";
+
+axios
+  .get("http://localhost:8080/")
+  .then((res) => {
+    document.title = res.data.page;
+  })
+  .catch((error) => console.error(error));
 
 var clicou = ref(false);
 
