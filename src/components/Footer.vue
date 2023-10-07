@@ -9,7 +9,9 @@
         <nav>
           <ul>
             <li>
-              <a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a>
+              <a href="#" target="_blank"
+                ><i class="ri-facebook-box-fill"></i
+              ></a>
             </li>
             <li>
               <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>
@@ -37,7 +39,7 @@
   padding: 10px 50px;
   justify-content: space-between;
   align-items: center;
-  background: black;
+  background: #080b16;
   border-top: 1px solid rgb(17, 24, 39);
 }
 
