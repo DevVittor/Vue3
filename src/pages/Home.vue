@@ -4,10 +4,19 @@ import Filter from "../components/Filter.vue";
 import { ref } from "vue";
 import axios from "axios";
 
+var axiosConfig = {
+  headers: {
+    Authorization: "Bearer" + localStorage.getItem("Token")
+  }
+}
+
 axios
-  .get("http://localhost:8080/")
+  .get("http://localhost:8080/", axiosConfig)
   .then((res) => {
-    document.title = res.data.page;
+    console.log(res.data);
+    /*const token = res.data.token;
+    document.write(token)
+    localStorage.setItem("Token", `${token}`)*/
   })
   .catch((error) => console.error(error));
 
