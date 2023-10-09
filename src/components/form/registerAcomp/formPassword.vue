@@ -16,24 +16,14 @@ function handleIcon2() {
     <div class="form-password">
       <label for=""> Password: </label>
       <div class="row-password">
-        <input
-          :type="mudarType1 ? 'text' : 'password'"
-          name=""
-          id="mudarType1"
-          placeholder="******"
-        />
+        <input :type="mudarType1 ? 'text' : 'password'" name="" id="mudarType1" placeholder="******" />
         <i @click="handleIcon1" class="fa-solid fa-eye-slash"></i>
       </div>
     </div>
     <div class="form-confirm-email">
       <label for=""> Confirm Password: </label>
       <div class="row-password">
-        <input
-          :type="mudarType2 ? 'text' : 'password'"
-          name=""
-          id="mudarType2"
-          placeholder="******"
-        />
+        <input :type="mudarType2 ? 'text' : 'password'" name="" id="mudarType2" placeholder="******" />
         <i @click="handleIcon2" class="fa-solid fa-eye-slash"></i>
       </div>
     </div>
@@ -45,20 +35,24 @@ function handleIcon2() {
   flex-direction: column;
   gap: 10px;
 }
+
 .form-password {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+
 .row-password input {
   border: none;
   outline: none;
 }
+
 .form-confirm-email {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+
 .row-password {
   border: 1px solid #ddd;
   padding-top: 3px;
@@ -67,6 +61,7 @@ function handleIcon2() {
   padding-right: 10px;
   border-radius: 3px;
 }
+
 .row-password i {
   cursor: pointer;
 }

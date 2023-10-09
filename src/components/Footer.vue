@@ -9,9 +9,7 @@
         <nav>
           <ul>
             <li>
-              <a href="#" target="_blank"
-                ><i class="ri-facebook-box-fill"></i
-              ></a>
+              <a href="#" target="_blank"><i class="ri-facebook-box-fill"></i></a>
             </li>
             <li>
               <a href="#" target="_blank"><i class="ri-instagram-line"></i></a>

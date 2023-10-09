@@ -11,6 +11,7 @@
   flex-direction: column;
   gap: 5px;
 }
+
 .container-contact input[type="text"] {
   padding: 3px 10px;
   border: 1px solid #ddd;

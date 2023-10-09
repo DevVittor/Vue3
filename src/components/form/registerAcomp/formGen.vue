@@ -34,21 +34,11 @@ onMounted(() => {
     <label for=""> Operado? </label>
     <div class="flex items-center gap-3">
       <label>
-        <input
-          type="checkbox"
-          name="opcao"
-          v-model="opcaoSim"
-          @change="desativarOpcao('Sim')"
-        />
+        <input type="checkbox" name="opcao" v-model="opcaoSim" @change="desativarOpcao('Sim')" />
         Sim
       </label>
       <label>
-        <input
-          type="checkbox"
-          name="opcao"
-          v-model="opcaoNao"
-          @change="desativarOpcao('Não')"
-        />
+        <input type="checkbox" name="opcao" v-model="opcaoNao" @change="desativarOpcao('Não')" />
         Não
       </label>
     </div>

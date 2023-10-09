@@ -26,12 +26,7 @@ function postCadastro() {
         <h2>Cadastrar Usuário</h2>
         <input type="text" name="nome" placeholder="Nome" v-model="nome" />
         <input type="text" name="email" placeholder="Email" v-model="email" />
-        <input
-          type="password"
-          name="senha"
-          placeholder="Senha"
-          v-model="senha"
-        />
+        <input type="password" name="senha" placeholder="Senha" v-model="senha" />
         <input type="submit" value="Cadastrar" />
       </form>
     </div>
@@ -45,6 +40,7 @@ function postCadastro() {
   padding: 20px;
   height: 87vh;
 }
+
 .box-cadastro {
   display: flex;
   justify-content: center;
@@ -54,6 +50,7 @@ function postCadastro() {
   border-radius: 12px;
   background: white;
 }
+
 .box-cadastro form {
   display: flex;
   flex-direction: column;
@@ -62,10 +59,12 @@ function postCadastro() {
   gap: 10px;
   padding: 40px;
 }
+
 .box-cadastro h2 {
   font-size: 24px;
   font-weight: 600;
 }
+
 .box-cadastro input {
   border: 1px solid #ddd;
   border-radius: 3px;

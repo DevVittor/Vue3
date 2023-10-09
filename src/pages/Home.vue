@@ -29,10 +29,7 @@ function clicouBtn() {
       <div class="box-filter-gen">
         <Filter />
         <div>
-          <button
-            @click="clicouBtn"
-            class="bg-white font-semibold pr-[15px] pl-[15px] pt-[3px] pb-[3px]"
-          >
+          <button @click="clicouBtn" class="bg-white font-semibold pr-[15px] pl-[15px] pt-[3px] pb-[3px]">
             <i class="pr-1.5 ri-equalizer-line"></i>Filtrar
           </button>
         </div>
@@ -40,17 +37,10 @@ function clicouBtn() {
     </div>
   </section>
   <section v-if="clicou == true">
-    <div
-      class="flex justify-center items-center pb-3 pr-[40px] pl-[40px] w-full"
-    >
+    <div class="flex justify-center items-center pb-3 pr-[40px] pl-[40px] w-full">
       <div class="h-auto bg-[#f9f9f9] w-full p-3">
         <div>
-          <input
-            type="text"
-            name=""
-            value=""
-            placeholder="Quem você quer achar ?"
-          />
+          <input type="text" name="" value="" placeholder="Quem você quer achar ?" />
         </div>
       </div>
     </div>
@@ -86,12 +76,14 @@ function clicouBtn() {
   width: 100%;
   padding: 20px;
 }
+
 .box-banner {
   background: white;
   height: 350px;
   width: 800px;
   border-radius: 12px;
 }
+
 .container-filter-gen {
   display: flex;
   justify-content: center;
@@ -101,12 +93,14 @@ function clicouBtn() {
   padding-left: 40px;
   padding-right: 40px;
 }
+
 .box-filter-gen {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
 .container-card-profile {
   display: flex;
   justify-content: center;

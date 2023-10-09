@@ -27,11 +27,13 @@
     display: flex;
     flex-direction: column;
 }
+
 .row-pagamento {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .check-pagamento {
     display: flex;
     align-items: center;

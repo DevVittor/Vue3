@@ -39,33 +39,22 @@ onMounted(() => {
 <template>
   <div class="flex justify-between lg:flex-row flex-col items-center gap-3">
     <div class="flex items-center gap-2">
-      <button
-        :class="{ active: isActive === 'mulher' }"
-        @click="
-          setActiveButton('mulher');
-          category('Mulher');
-        "
-      >
+      <button :class="{ active: isActive === 'mulher' }" @click="
+        setActiveButton('mulher');
+      category('Mulher');
+      ">
         <i class="fa-solid fa-venus"></i>Mulher | 3 mil
       </button>
-      <button
-        :class="{ active: isActive === 'homem' }"
-        @click="
-          setActiveButton('homem');
-          category('Homem');
-        "
-        class=""
-      >
+      <button :class="{ active: isActive === 'homem' }" @click="
+        setActiveButton('homem');
+      category('Homem');
+      " class="">
         <i class="fa-solid fa-mars"></i>Homem | 243
       </button>
-      <button
-        :class="{ active: isActive === 'trans' }"
-        @click="
-          setActiveButton('trans');
-          category('Trans');
-        "
-        class=""
-      >
+      <button :class="{ active: isActive === 'trans' }" @click="
+        setActiveButton('trans');
+      category('Trans');
+      " class="">
         <i class="fa-solid fa-transgender"></i>Trans | 2 mil
       </button>
     </div>

@@ -13,6 +13,7 @@
   flex-direction: column;
   gap: 5px;
 }
+
 .box-email {
   display: flex;
   padding-top: 3px;
@@ -22,6 +23,7 @@
   border: 1px solid #ddd;
   border-radius: 3px;
 }
+
 .box-email input {
   outline: none;
 }

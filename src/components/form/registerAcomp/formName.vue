@@ -19,11 +19,13 @@
   gap: 5px;
   width: 100%;
 }
+
 .form-name-lastname {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
+
 .form-name-lastname input {
   border: 1px solid #ddd;
   border-radius: 3px;

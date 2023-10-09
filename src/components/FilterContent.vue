@@ -49,12 +49,14 @@ import FilterBtn from "../components/FilterBtn.vue";
     width: 100%;
     padding: 20px;
 }
+
 .box-banner {
     background: red;
     height: 350px;
     width: 800px;
     border-radius: 12px;
 }
+
 .container-filter-gen {
     display: flex;
     justify-content: center;
@@ -64,12 +66,14 @@ import FilterBtn from "../components/FilterBtn.vue";
     padding-left: 40px;
     padding-right: 40px;
 }
+
 .box-filter-gen {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
+
 .container-card-profile {
     display: flex;
     justify-content: center;
@@ -81,5 +85,4 @@ import FilterBtn from "../components/FilterBtn.vue";
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
-}
-</style>
+}</style>

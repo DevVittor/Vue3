@@ -35,7 +35,7 @@ const servi = ref([
   "Orgia"
 ]);
 
-function Clicou(){
+function Clicou() {
   const modalDiv = document.getElementById('Service');
   modalDiv.classList.toggle('selected');
 }
@@ -50,45 +50,31 @@ function Clicou(){
         <div class="h-full w-[70%] flex flex-col justify-center items-center">
           <div class="">
             <button
-              class="bg-blue-500 mb-[5px] pr-[15px] pl-[15px] pb-[3px] pt-[3px] rounded-[3px] text-white font-semibold"
-            >
+              class="bg-blue-500 mb-[5px] pr-[15px] pl-[15px] pb-[3px] pt-[3px] rounded-[3px] text-white font-semibold">
               <i class="pr-1.5 ri-play-circle-line"></i>Video
             </button>
           </div>
-          <div
-            class="h-[180px] w-[180px] flex justify-center items-end shadow-md rounded-[12px]"
-          >
-            <img
-              class="h-full w-full object-cover rounded-[12px] pointer-events-none"
+          <div class="h-[180px] w-[180px] flex justify-center items-end shadow-md rounded-[12px]">
+            <img class="h-full w-full object-cover rounded-[12px] pointer-events-none"
               src="https://images.pexels.com/photos/1877913/pexels-photo-1877913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
+              alt="" />
             <div class="absolute mb-[-5px]">
               <span
-                class="bg-red-500 shadow-md text-[14px] text-white font-semibold pt-[5px] pb-[5px] pr-[20px] pl-[20px] rounded-[3px]"
-                >R$ {{money}}/H</span
-              >
+                class="bg-red-500 shadow-md text-[14px] text-white font-semibold pt-[5px] pb-[5px] pr-[20px] pl-[20px] rounded-[3px]">R$
+                {{ money }}/H</span>
             </div>
           </div>
           <div class="flex flex-col items-center justify-center">
             <h3 class="pt-[15px]" v-if="iconCheck == true">
-              <i
-                class="pr-2 text-[20px] text-blue-500 ri-shield-check-fill"
-                title="Perfil Verificado"
-              ></i
-              ><i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>{{name}}, {{age}}
+              <i class="pr-2 text-[20px] text-blue-500 ri-shield-check-fill" title="Perfil Verificado"></i><i
+                class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>{{ name }}, {{ age }}
             </h3>
             <h3 class="pt-[15px]" v-else>
               <i class="pr-2 text-[20px] text-red-500 ri-close-circle-fill"></i>
-              <i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>{{name}}, {{age}}
+              <i class="pr-1.5 fa-solid fa-venus" title="Mulher"></i>{{ name }}, {{ age }}
             </h3>
-            <span
-              ><i
-                class="pr-2 text-[20px] text-red-500 ri-map-pin-fill"
-                title="Localização"
-              ></i
-              >{{estado}}, {{ cidade }}</span
-            >
+            <span><i class="pr-2 text-[20px] text-red-500 ri-map-pin-fill" title="Localização"></i>{{ estado }}, {{ cidade
+            }}</span>
           </div>
           <div class="pt-[8px]">
             <p class="w-[350px] text-center">
@@ -99,68 +85,43 @@ function Clicou(){
             <nav>
               <ul class="flex items-center gap-3">
                 <li>
-                  <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-facebook-box-fill" title="facebook"></i
-                  ></a>
+                  <a class="text-[24px]" href="#" target="_blank"><i class="ri-facebook-box-fill"
+                      title="facebook"></i></a>
                 </li>
                 <li>
-                  <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-instagram-line" title="Instagram"></i
-                  ></a>
+                  <a class="text-[24px]" href="#" target="_blank"><i class="ri-instagram-line" title="Instagram"></i></a>
                 </li>
                 <li>
-                  <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-twitter-x-fill" title="Twitter"></i
-                  ></a>
+                  <a class="text-[24px]" href="#" target="_blank"><i class="ri-twitter-x-fill" title="Twitter"></i></a>
                 </li>
                 <li>
-                  <a class="text-[24px]" href="#" target="_blank"
-                    ><i class="ri-telegram-fill" title="Telegram"></i
-                  ></a>
+                  <a class="text-[24px]" href="#" target="_blank"><i class="ri-telegram-fill" title="Telegram"></i></a>
                 </li>
               </ul>
             </nav>
           </div>
-          <div
-            class="flex flex-wrap justify-center items-center gap-3 pt-[5px]"
-          >
-            <button
-              @click="Clicou"
-              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
-            >
-              <i class="pr-1.5 text-white fa-solid fa-bell-concierge"></i
-              >Serviços
+          <div class="flex flex-wrap justify-center items-center gap-3 pt-[5px]">
+            <button @click="Clicou" class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white">
+              <i class="pr-1.5 text-white fa-solid fa-bell-concierge"></i>Serviços
             </button>
-            <button
-              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
-            >
+            <button class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white">
               <i class="pr-1.5 text-white fa-solid fa-child-reaching"></i>Corpo
             </button>
-            <button
-              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
-            >
-              <i class="pr-1.5 text-white fa-regular fa-calendar-days"></i
-              >Horários
+            <button class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white">
+              <i class="pr-1.5 text-white fa-regular fa-calendar-days"></i>Horários
             </button>
-            <button
-              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
-            >
+            <button class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white">
               <i class="pr-1.5 text-white fa-solid fa-map-pin"></i>Local
             </button>
-            <button
-              class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white"
-            >
-              <i class="pr-1.5 text-white fa-solid fa-money-check-dollar"></i
-              >Formas de Pagamento
+            <button class="bg-black pr-[10px] pl-[10px] pt-[5px] pb-[5px] rounded-[3px] text-white">
+              <i class="pr-1.5 text-white fa-solid fa-money-check-dollar"></i>Formas de Pagamento
             </button>
           </div>
         </div>
       </div>
     </section>
     <section>
-      <div
-        className="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 p-1.5"
-      >
+      <div className="m-auto w-full 2xl:columns-4 md:columns-4 sm:columns-2 gap-1.5 p-1.5">
         <div v-for="items in myGallery" class="mb-1.5 break-inside-avoid">
           <img class="w-full object-cover pointer-events-none" :src="items" alt="imagem" />
         </div>
@@ -178,7 +139,7 @@ function Clicou(){
   </main>
 </template>
 <style scoped>
-.modal{
+.modal {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -196,8 +157,8 @@ function Clicou(){
   border-radius: 12px;
   padding: 20px;
 }
-.selected{
+
+.selected {
   display: none;
 }
-
 </style>

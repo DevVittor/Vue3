@@ -60,11 +60,8 @@ onMounted(() => {
                         <h3>Contato</h3>
                     </div>
                     <div class="box-input">
-                        <input
-                            class="border-[1px] border-[#ddd] pr-[10px] pl-[10px] pt-[3px] pb-[3px]"
-                            type="text"
-                            placeholder="(21) 998674-189"
-                        />
+                        <input class="border-[1px] border-[#ddd] pr-[10px] pl-[10px] pt-[3px] pb-[3px]" type="text"
+                            placeholder="(21) 998674-189" />
                     </div>
                 </div>
                 <div class="box-info">
@@ -74,10 +71,7 @@ onMounted(() => {
                     <div class="box-input">
                         <div class="flex flex-col">
                             <label>Nome</label>
-                            <input
-                                class="border-[1px] border-[#ddd] pr-[10px] pl-[10px] pt-[3px] pb-[3px]"
-                                type="text"
-                            />
+                            <input class="border-[1px] border-[#ddd] pr-[10px] pl-[10px] pt-[3px] pb-[3px]" type="text" />
                         </div>
                     </div>
                     <div class="box-input">
@@ -155,8 +149,7 @@ onMounted(() => {
                         <label><input type="checkbox" /> Suruba </label>
                         <label><input type="checkbox" /> Chuva Dourada </label>
                         <label>
-                            <input type="checkbox" /> Garganta Profunda</label
-                        >
+                            <input type="checkbox" /> Garganta Profunda</label>
                     </div>
                 </div>
                 <div class="box-input flex-col">
@@ -175,9 +168,7 @@ onMounted(() => {
                         <label><input type="checkbox" /> Homem </label>
                         <label><input type="checkbox" /> Trans </label>
                         <label><input type="checkbox" /> Casal </label>
-                        <label
-                            ><input type="checkbox" /> Deficiente Físico</label
-                        >
+                        <label><input type="checkbox" /> Deficiente Físico</label>
                     </div>
                 </div>
                 <div class="box-input flex-col">
@@ -185,11 +176,9 @@ onMounted(() => {
                     <div class="flex items-center gap-[10px]">
                         <label><input type="checkbox" /> Dinheiro </label>
                         <label><input type="checkbox" /> Pix </label>
-                        <label
-                            ><input type="checkbox" /> Cartão de crédito
+                        <label><input type="checkbox" /> Cartão de crédito
                         </label>
-                        <label
-                            ><input type="checkbox" /> Cartão de Débito
+                        <label><input type="checkbox" /> Cartão de Débito
                         </label>
                     </div>
                 </div>
@@ -209,24 +198,17 @@ onMounted(() => {
                         <label><input type="checkbox" /> Domicílio </label>
                         <label><input type="checkbox" /> Clube de Swing </label>
                         <label><input type="checkbox" /> Com local </label>
-                        <label
-                            ><input type="checkbox" /> Despedida de solteiro
+                        <label><input type="checkbox" /> Despedida de solteiro
                         </label>
                         <label><input type="checkbox" /> Motel </label>
                         <label><input type="checkbox" />Hotel </label>
-                        <label
-                            ><input type="checkbox" /> Festas e Eventos
+                        <label><input type="checkbox" /> Festas e Eventos
                         </label>
-                        <label
-                            ><input type="checkbox" /> Jantar Romântico
+                        <label><input type="checkbox" /> Jantar Romântico
                         </label>
-                        <label
-                            ><input type="checkbox" /> Viajens Nacionais</label
-                        >
-                        <label
-                            ><input type="checkbox" /> Viajens
-                            Internacionais</label
-                        >
+                        <label><input type="checkbox" /> Viajens Nacionais</label>
+                        <label><input type="checkbox" /> Viajens
+                            Internacionais</label>
                     </div>
                 </div>
             </div>
@@ -241,11 +223,13 @@ onMounted(() => {
     flex-wrap: wrap;
     background: white;
 }
+
 .box-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
+
 .box-input {
     display: flex;
     align-items: center;

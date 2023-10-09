@@ -85,19 +85,10 @@ watch(modal, (newValue) => {
 </script>
 <template>
     <section>
-        <div
-            class="m-auto w-[70%] 2xl:columns-4 lg:columns-4 columns-2 gap-2 pb-2 pr-2 pl-2 pt-0"
-        >
-            <div
-                v-for="(imagens, index) in fotos"
-                class="mb-2.5 w-full break-inside-avoid"
-            >
-                <img
-                    @click="modalImg(imagens, index)"
-                    class="max-w-full cursor-pointer rounded-md"
-                    :src="imagens"
-                    :alt="index"
-                />
+        <div class="m-auto w-[70%] 2xl:columns-4 lg:columns-4 columns-2 gap-2 pb-2 pr-2 pl-2 pt-0">
+            <div v-for="(imagens, index) in fotos" class="mb-2.5 w-full break-inside-avoid">
+                <img @click="modalImg(imagens, index)" class="max-w-full cursor-pointer rounded-md" :src="imagens"
+                    :alt="index" />
             </div>
         </div>
     </section>
