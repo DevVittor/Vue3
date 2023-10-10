@@ -1,41 +1,30 @@
 <script setup>
 import profileCard from "../components/profileCard.vue";
 import Filter from "../components/Filter.vue";
-import { ref } from "vue";
-import axios from "axios";
-import { isTokenValid } from '../api/auth'; // Importe sua função de verificação
-import jwt_decode from "jwt-decode";
+import { ref, onMounted } from "vue";
+/*import axios from 'axios';
 
-var token = localStorage.getItem('token');
-console.log(token);
+function checarAcesso() {
+  const token = localStorage.getItem("Token");
 
-/*{
-  function createdd() {
-    const token = localStorage.getItem('token');
-
-    if (!isTokenValid(token)) {
-      // Token inválido, redirecione para a página de login ou tome alguma ação
-      this.$router.push('/login');
-    } else {
-      // Token válido, continue com as operações permitidas
+  const axiosConfig = {
+    headers: {
+      'Authorization': `Bearer ${token}`
     }
-  }
-};*/
+  };
 
-
-
-
-
-
-axios
-  .get("http://localhost:8080/")
-  .then((res) => {
-    console.log(res.data);
-    /*const token = res.data.token;
-    document.write(token)
-    localStorage.setItem("Token", `${token}`)*/
-  })
-  .catch((error) => console.error(error));
+  // Enviar o token no corpo da solicitação POST
+  axios.post('http://localhost:3000/', {}, axiosConfig)
+    .then(response => {
+      console.log(response.config.headers.Authorization);
+    })
+    .catch(error => {
+      console.error('Erro na solicitação:', error);
+    });
+}
+onMounted(() => {
+  checarAcesso();
+})*/
 
 var clicou = ref(false);
 

@@ -7,24 +7,24 @@ const isActive = ref("mulher");
 const setActiveButton = (button) => {
   isActive.value = button;
 };
-function category() {
+/*function category() {
   if (isActive.value == "mulher") {
     axios
-      .get("http://localhost:8080/")
+      .get("http://localhost:3000/")
       .then((res) => {
         console.log(res.data);
       })
       .catch((error) => console.error(error));
   } else if (isActive.value == "homem") {
     axios
-      .get("http://localhost:8080/")
+      .get("http://localhost:3000/")
       .then((res) => {
         console.log(res.data);
       })
       .catch((error) => console.error(error));
   } else {
     axios
-      .get("http://localhost:8080/")
+      .get("http://localhost:3000/")
       .then((res) => {
         console.log(res.data);
       })
@@ -33,7 +33,7 @@ function category() {
 }
 onMounted(() => {
   category();
-});
+});*/
 </script>
 
 <template>

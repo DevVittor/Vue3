@@ -14,31 +14,20 @@ onMounted(() => {
     });
 });
 
-function checarDados() {
+function checarDados(event) {
+    event.preventDefault();
     const pegarDados = {
         email: email.value,
         senha: senha.value,
-
-    };
-
-    axios
-        .post("http://localhost:3000/acessar/ok", pegarDados)
-        .then((res) => {
-            console.log(res.data);
-            /*const token = res.data.token;
-            localStorage.setItem("Token", `${token}`);*/
-        })
-        .catch((error) => console.error(error));
-}
-/*var axiosConfig = {
-    headers: {
-        Authorization: "Bearer" + localStorage.getItem("Token")
     }
-}*/
-
-
-
-
+    axios.post('http://localhost:3000/acessar/ok', pegarDados)
+        .then(res => {
+            let token = res.data.token;
+            localStorage.setItem("Token", token);
+        }).catch(error => {
+            console.log(`Login Inválido por causa do error ${error}`)
+        });
+}
 </script>
 <template>
     <section>

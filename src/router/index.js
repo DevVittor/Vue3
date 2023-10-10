@@ -7,6 +7,16 @@ const router = createRouter({
             path: "/",
             name: "Inicio",
             component: () => import("../pages/Home.vue"),
+            beforeEnter: (to, from, next) => {
+                const token = localStorage.getItem("Token");
+                if (token) {
+                    // O token existe, permita o acesso à rota protegida
+                    next();
+                } else {
+                    // O token não existe, redirecione para a página de login
+                    next("/acessar"); // Ou qualquer outra rota de login
+                }
+            },
         },
         {
             path: "/:id",
@@ -38,9 +48,11 @@ const router = createRouter({
             name: "error",
             component: () => import("../pages/Error404.vue"),
         },
+        
     ],
     scrollBehavior(to, from, savedPosition) {
         return { top: 0 };
     },
 });
+
 export default router;
