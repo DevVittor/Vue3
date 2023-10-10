@@ -3,15 +3,32 @@ import profileCard from "../components/profileCard.vue";
 import Filter from "../components/Filter.vue";
 import { ref } from "vue";
 import axios from "axios";
+import { isTokenValid } from '../api/auth'; // Importe sua função de verificação
+import jwt_decode from "jwt-decode";
 
-var axiosConfig = {
-  headers: {
-    Authorization: "Bearer" + localStorage.getItem("Token")
+var token = localStorage.getItem('token');
+console.log(token);
+
+/*{
+  function createdd() {
+    const token = localStorage.getItem('token');
+
+    if (!isTokenValid(token)) {
+      // Token inválido, redirecione para a página de login ou tome alguma ação
+      this.$router.push('/login');
+    } else {
+      // Token válido, continue com as operações permitidas
+    }
   }
-}
+};*/
+
+
+
+
+
 
 axios
-  .get("http://localhost:8080/", axiosConfig)
+  .get("http://localhost:8080/")
   .then((res) => {
     console.log(res.data);
     /*const token = res.data.token;

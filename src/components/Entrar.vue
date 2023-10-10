@@ -4,11 +4,7 @@ import { RouterLink } from "vue-router";
 import axios from "axios";
 const email = ref("");
 const senha = ref("");
-var axiosConfig = {
-    headers: {
-        Authorization: "Bearer" + localStorage.getItem("Token")
-    }
-}
+
 const alturaDaPagina = ref(window.innerHeight - 75 + "px");
 
 onMounted(() => {
@@ -24,16 +20,25 @@ function checarDados() {
         senha: senha.value,
 
     };
+
     axios
-        .post("http://localhost:8080/acessar/ok", pegarDados)
+        .post("http://localhost:3000/acessar/ok", pegarDados)
         .then((res) => {
             console.log(res.data);
-            const token = res.data.token;
-            document.write(token)
-            localStorage.setItem("Token", `${token}`)
+            /*const token = res.data.token;
+            localStorage.setItem("Token", `${token}`);*/
         })
         .catch((error) => console.error(error));
 }
+/*var axiosConfig = {
+    headers: {
+        Authorization: "Bearer" + localStorage.getItem("Token")
+    }
+}*/
+
+
+
+
 </script>
 <template>
     <section>
