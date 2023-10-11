@@ -1,7 +1,9 @@
 <script setup>
 import profileCard from "../components/profileCard.vue";
 import Filter from "../components/Filter.vue";
+import Profile from '../components/exemplo.vue';
 import { ref, onMounted } from "vue";
+import axios from "axios";
 /*import axios from 'axios';
 
 function checarAcesso() {
@@ -25,6 +27,16 @@ function checarAcesso() {
 onMounted(() => {
   checarAcesso();
 })*/
+
+function titlePage() {
+  axios.post('http://localhost:3000/')
+    .then(res => {
+      document.title = res.data.page;
+    }).catch(error => console.error(`Deu error: ${error}`))
+}
+onMounted(() => {
+  titlePage();
+})
 
 var clicou = ref(false);
 
@@ -82,6 +94,7 @@ function clicouBtn() {
       <profileCard />
     </div>
   </section>
+  <Profile />
 </template>
 <style scoped>
 .container-banner {
