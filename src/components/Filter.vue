@@ -67,6 +67,7 @@ onMounted(() => {
   border: 1px solid #000;
   padding: 5px 10px;
   color: #FFFFFF;
+  border-radius: 3px;
 }
 
 .active i {
@@ -79,6 +80,7 @@ button:not(.active) {
   border: 1px solid #000;
   padding: 5px 10px;
   color: #000;
+  border-radius: 3px;
 }
 
 button:not(.active) i {

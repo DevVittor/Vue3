@@ -56,7 +56,7 @@ function clicouBtn() {
         <Filter />
         <div>
           <button @click="clicouBtn"
-            class="bg-[#ffffff] text-black border-[1px] border-[#ddd] font-semibold pr-[15px] pl-[15px] pt-[3px] pb-[3px]">
+            class="bg-[#ffffff] text-black border-[1px] border-[#ddd] font-normal rounded-[3px] pr-[15px] pl-[15px] pt-[3px] pb-[3px]">
             <i class="pr-1.5 ri-equalizer-line"></i>Filtrar
           </button>
         </div>

@@ -17,7 +17,7 @@ onMounted(() => {
                 <div>
                     <nav>
                         <ul
-                            class="flex text-white justify-center flex-wrap items-center gap-3 bg-black rounded-md pr-[10px] pt-[3px] pb-[3px] pl-[10px]">
+                            class="flex text-white justify-center flex-wrap items-center gap-3 bg-black rounded-[3px] pr-[10px] pt-[3px] pb-[3px] pl-[10px]">
                             <li class=" font-normal"><i
                                     class="pr-1.5 text-[20px] text-blue-500 ri-verified-badge-fill"></i>Profissional</li>
                             <li class="font-normal"><i
@@ -90,9 +90,9 @@ onMounted(() => {
             </div>
             <div class="h-full w-full flex flex-col gap-5 justify-between items-center  ">
                 <Services />
-                <div class="flex flex-col items-end justify-center h-auto max-h-[600px] min-w-[400px] max-w[800px]">
-                    <img class="h-full w-full object-contain rounded-md"
-                        src="https://images.pexels.com/photos/12743455/pexels-photo-12743455.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                <div class="box-img flex flex-col items-end justify-center h-auto max-h-[600px] min-w-[400px] max-w[800px]">
+                    <img class="h-full w-full object-contain rounded-[3px]"
+                        src="https://images.pexels.com/photos/6221432/pexels-photo-6221432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                         alt="">
                 </div>
                 <Services />
@@ -105,5 +105,13 @@ onMounted(() => {
 <style scoped>
 .container-info-profile {
     border-right: 1px solid #ddd;
+}
+
+.box-img {
+    border-radius: 3px;
+}
+
+.box-img img {
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 </style>

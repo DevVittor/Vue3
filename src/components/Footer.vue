@@ -37,7 +37,7 @@
   padding: 10px 50px;
   justify-content: space-between;
   align-items: center;
-  background: #080b16;
+  background: #000;
   border-top: 1px solid rgb(17, 24, 39);
 }
 

@@ -33,7 +33,7 @@ import { RouterLink } from 'vue-router';
                     </div>
                     <div class="">
                         <button href="/2"
-                            class="bg-black text-white font-semibold text-[17px] pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-md"><i
+                            class="bg-black text-white font-semibold text-[17px] pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"><i
                                 class="pr-1.5 ri-eye-line"></i>Acessar</button>
                     </div>
                 </div>
@@ -56,7 +56,7 @@ import { RouterLink } from 'vue-router';
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 3px;
     pointer-events: none;
 }
 
@@ -68,7 +68,7 @@ import { RouterLink } from 'vue-router';
     position: absolute;
     height: 430px;
     width: 250px;
-    border-radius: 12px;
+
 }
 
 .bar-profile {
@@ -82,7 +82,7 @@ import { RouterLink } from 'vue-router';
     height: 35px;
     margin: 10px;
     background: white;
-    border-radius: 12px;
+    border-radius: 3px;
 }
 
 .boost-profile {
@@ -99,8 +99,8 @@ import { RouterLink } from 'vue-router';
     backdrop-filter: blur(15px);
     height: auto;
     width: 100%;
-    gap: 5px;
-    border-radius: 0px 0px 12px 12px;
-    padding: 5px;
+    gap: 3px;
+    padding: 8px 5px;
+    border-radius: 0px 0px 3px 3px;
 }
 </style>
