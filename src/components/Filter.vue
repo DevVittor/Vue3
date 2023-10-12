@@ -63,22 +63,22 @@ onMounted(() => {
 
 <style scoped>
 .active {
-  background: white;
-  border: 1px solid white;
+  background: #000;
+  border: 1px solid #000;
   padding: 5px 10px;
-  color: #000;
+  color: #FFFFFF;
 }
 
 .active i {
-  color: #000;
+  color: #FFFFFF;
   padding-right: 5px;
 }
 
 button:not(.active) {
-  background: #080b16;
-  border: 1px solid white;
+  background: #FFFFFF;
+  border: 1px solid #000;
   padding: 5px 10px;
-  color: white;
+  color: #000;
 }
 
 button:not(.active) i {

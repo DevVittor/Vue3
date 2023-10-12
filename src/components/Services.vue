@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <section>
+    <div class="container-slider">
         <div class="slider">
             <div class="slider-track">
                 <div class="slide">
@@ -156,9 +156,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </template>
 <style scoped>
+.container-slider {
+    width: 100%;
+}
+
 .slider {
     position: relative;
     overflow: hidden;
@@ -168,6 +172,8 @@
     align-items: center;
     padding: 10px 0;
     width: 100%;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
     margin: auto;
     background: white;
 }

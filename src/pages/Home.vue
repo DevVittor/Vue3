@@ -1,7 +1,6 @@
 <script setup>
 import profileCard from "../components/profileCard.vue";
 import Filter from "../components/Filter.vue";
-import Profile from '../components/exemplo.vue';
 import { ref, onMounted } from "vue";
 import axios from "axios";
 /*import axios from 'axios';
@@ -56,7 +55,8 @@ function clicouBtn() {
       <div class="box-filter-gen">
         <Filter />
         <div>
-          <button @click="clicouBtn" class="bg-white font-semibold pr-[15px] pl-[15px] pt-[3px] pb-[3px]">
+          <button @click="clicouBtn"
+            class="bg-[#ffffff] text-black border-[1px] border-[#ddd] font-semibold pr-[15px] pl-[15px] pt-[3px] pb-[3px]">
             <i class="pr-1.5 ri-equalizer-line"></i>Filtrar
           </button>
         </div>
@@ -94,7 +94,6 @@ function clicouBtn() {
       <profileCard />
     </div>
   </section>
-  <Profile />
 </template>
 <style scoped>
 .container-banner {
@@ -106,7 +105,7 @@ function clicouBtn() {
 }
 
 .box-banner {
-  background: white;
+  background: black;
   height: 350px;
   width: 800px;
   border-radius: 12px;

@@ -20,8 +20,8 @@ const router = createRouter({
         },
         {
             path: "/:id",
-            name: "box",
-            component: () => import("../components/Box.vue"),
+            name: "Profile",
+            component: () => import("../components/exemplo.vue"),
         },
         {
             path: "/perfil",
@@ -50,8 +50,8 @@ const router = createRouter({
         },
         {
             path: "/:pathMatch(.*)*",
-            name: "error",
-            component: () => import("../pages/Error404.vue"),
+            name: "Error",
+            component: () => import("../components/Error404.vue"),
         },
         
     ],
