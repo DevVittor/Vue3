@@ -1,7 +1,10 @@
 <script setup>
 import Services from './Services.vue';
+import imageSlider from './sliderImage.vue';
 import { ref, onMounted } from 'vue';
+
 const alturaDaPagina = ref(window.innerHeight - 126 + "px");
+
 
 onMounted(() => {
     // Atualizar a altura quando a janela for redimensionada
@@ -9,6 +12,10 @@ onMounted(() => {
         alturaDaPagina.value = window.innerHeight - 126 + "px";
     });
 });
+
+
+
+
 </script>
 <template>
     <section>
@@ -45,8 +52,6 @@ onMounted(() => {
                         <hr class="w-[70px] border-[2px] border-black">
                         <h4 class="text-whitefont-medium text-[18px]">32 anos</h4>
                     </div>
-
-
                 </div>
                 <div class="">
                     <p class=" text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -90,10 +95,12 @@ onMounted(() => {
             </div>
             <div class="h-full w-full flex flex-col gap-5 justify-between items-center  ">
                 <Services />
-                <div class="box-img flex flex-col items-end justify-center h-auto max-h-[600px] min-w-[400px] max-w[800px]">
-                    <img class="h-full w-full object-contain rounded-[3px]"
-                        src="https://images.pexels.com/photos/6221432/pexels-photo-6221432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt="">
+                <div
+                    class="flex flex-col gap-3 items-center justify-center h-auto max-h-[600px] min-w-[400px] max-w[800px]">
+                    <imageSlider />
+                    <button class="bg-black text-white font-semibold pr-[10px] pl-[10px] pb-[5px] pt-[5px] rounded-full"><i
+                            class="pr-1.5 ri-play-circle-line"></i>Assistir o
+                        Vídeo</button>
                 </div>
                 <Services />
             </div>
@@ -105,13 +112,5 @@ onMounted(() => {
 <style scoped>
 .container-info-profile {
     border-right: 1px solid #ddd;
-}
-
-.box-img {
-    border-radius: 3px;
-}
-
-.box-img img {
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 </style>

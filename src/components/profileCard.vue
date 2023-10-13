@@ -4,9 +4,11 @@ import { RouterLink } from 'vue-router';
 <template>
     <RouterLink to="/2">
         <div class="card-profile">
-            <img class="" loading="lazy"
-                src="https://images.pexels.com/photos/15326936/pexels-photo-15326936/free-photo-of-sutia-inclinando-apoiando-lingerie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="" />
+            <div class="box-img">
+                <img class="" loading="lazy"
+                    src="https://images.pexels.com/photos/15326936/pexels-photo-15326936/free-photo-of-sutia-inclinando-apoiando-lingerie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="" />
+            </div>
             <div class="container-info-profile">
                 <div class="bar-profile">
                     <div class="">
@@ -43,16 +45,27 @@ import { RouterLink } from 'vue-router';
 </template>
 <style scoped>
 .card-profile {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-radius: 12px;
+    width: 250px;
+}
+
+.box-img {
+    display: flex;
+    break-inside: avoid;
     height: 430px;
     width: 250px;
+    justify-content: flex-center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 12px;
 }
 
-.card-profile img {
+.box-img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
