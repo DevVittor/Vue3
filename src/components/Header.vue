@@ -3,23 +3,21 @@ import { RouterLink } from "vue-router";
 //import IconProfile from "./iconProfile.vue";
 </script>
 <template>
-  <header class="sticky top-0 z-50 bg-[#000] text-white">
-    <div
-      class="container-menu flex items-center sm:flex-row flex-col justify-between 2xl:pr-[50px] 2xl:p-[50px] pb-[20px] 2xl:pt-[10px] 2xl:pb-[10px]">
-      <div class="">
+  <header class="">
+    <div class="container-menu">
+      <div class="box-logo">
         <RouterLink :to="{ path: '/' }">
-          <h1 class="text-[36px] font-semibold">
-            A<b class="text-[#FE0]">BR</b>IME
+          <h1 class="">
+            A<b class="">BR</b>IME
           </h1>
         </RouterLink>
         <!--<RouterLink to="/box">Perfil</RouterLink>-->
       </div>
-      <div class="flex items-center gap-3">
-        <button class="bg-white pr-[10px] rounded-[3px] pl-[10px] pt-[3px] pb-[3px]">
+      <div class="box-menu">
+        <button class="btn-acessar">
           <RouterLink :to="{ path: '/acessar' }" class="text-black">Acessar</RouterLink>
         </button>
-        <button
-          class="bg-[#FE0000] text-white border-[1px] rounded-[3px] border-transparent font-semibold pr-[10px] pl-[10px] pt-[3px] pb-[3px]">
+        <button class="btn-create">
           <RouterLink :to="{ path: '/cadastrar' }">Criar Conta</RouterLink>
         </button>
       </div>
@@ -29,7 +27,51 @@ import { RouterLink } from "vue-router";
 </template>
 <style scoped>
 header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: black;
   border-bottom: 1px solid rgb(17, 24, 39);
+}
+
+.container-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 50px;
+  width: 100%;
+}
+
+.box-logo h1 {
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+}
+
+.box-logo b {
+  color: #fe0;
+}
+
+.box-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-acessar {
+  background: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.btn-create {
+  background: #FE0000;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1540px) {
@@ -38,10 +80,10 @@ header {
   }
 }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 640px) {
   .container-menu {
     flex-direction: column;
-    gap: 10px;
+    padding: 10px 20px;
   }
 }
 </style>

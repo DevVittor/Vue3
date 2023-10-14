@@ -33,7 +33,7 @@ onMounted(() => {
                 </div>
                 <div class="container-name-gen-age">
                     <div class="container-name">
-                        <h2 class=" ">Jéssica <b class="pl-[50px]">Gomes</b>
+                        <h2 class="">Jéssica <b class="pl-[50px]">Gomes</b>
                         </h2>
                     </div>
                     <div class="container-gen-age">
@@ -43,14 +43,14 @@ onMounted(() => {
                     </div>
                 </div>
                 <div class="container-description">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         Perspiciatis
                         placeat hic
                         error, veniam
                         natus ipsum labore vitae facilis aliquam harum cumque illum consectetur in. Quibusdam, est iure!
                         Dolorum, molestiae quasi!</p>
                 </div>
-                <div class="container-price-horarios-pagamentos">
+                <div class="container-price-horarios-pagamentos ">
                     <div class="container-price">
                         <h2 class="">R$ 250/<span class="">Hora</span></h2>
                     </div>
@@ -88,15 +88,18 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     height: 837px;
+    width: 100%;
 }
 
 .container-info-profile {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
     height: 100%;
-    width: 650px;
+    width: 30%;
     padding: 5px 10px;
     border-right: 1px solid #ddd;
 }
