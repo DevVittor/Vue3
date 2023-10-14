@@ -7,7 +7,7 @@ const router = createRouter({
             path: "/",
             name: "Inicio",
             component: () => import("../pages/Home.vue"),
-            beforeEnter: (to, from, next) => {
+            /*beforeEnter: (to, from, next) => {
                 const token = localStorage.getItem("Token");
                 if (token) {
                     // O token existe, permita o acesso à rota protegida
@@ -16,7 +16,7 @@ const router = createRouter({
                     // O token não existe, redirecione para a página de login
                     next("/acessar"); // Ou qualquer outra rota de login
                 }
-            },
+            },*/
         },
         {
             path: "/:id",
