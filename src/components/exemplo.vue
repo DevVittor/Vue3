@@ -272,9 +272,16 @@ onMounted(() => {
     flex-direction: column;
     gap: 20px;
     height: auto;
+    width: 100%;
     max-height: 600px;
     min-width: 400px;
     max-width: 800px;
+}
+
+.box-image-profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .box-image-profile button {
@@ -329,10 +336,8 @@ onMounted(() => {
     .box-image-profile {
         gap: 10px;
         padding: 5px;
+        min-width: 100%;
     }
 
-    .box-image-profile img {
-        width: 90%;
-    }
 }
 </style>

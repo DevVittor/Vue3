@@ -51,11 +51,3 @@ export default {
     },
 };
 </script>
-<style lang="css">
-img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    border-radius: 3px;
-}
-</style>
