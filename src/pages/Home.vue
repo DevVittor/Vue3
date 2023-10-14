@@ -138,4 +138,21 @@ function clicouBtn() {
     width: 100%;
   }
 }
+
+@media screen and (max-width:640px) {
+  .container-banner {
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  .box-banner {
+    background-image: url("https://images.pexels.com/photos/159886/pexels-photo-159886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+    border-radius: 0px;
+  }
+}
 </style>
