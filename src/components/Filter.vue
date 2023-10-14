@@ -37,8 +37,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex justify-between lg:flex-row flex-col items-center gap-3">
-    <div class="flex items-center gap-2">
+  <div class="flex justify-between lg:flex-row flex-wrap flex-col items-center gap-3">
+    <div class="flex flex-wrap justify-center items-center gap-2">
       <button :class="{ active: isActive === 'mulher' }" @click="
         setActiveButton('mulher');
       category('Mulher');

@@ -108,6 +108,7 @@ function clicouBtn() {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -119,5 +120,22 @@ function clicouBtn() {
   padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
+}
+
+@media screen and (max-width:990px) {
+  .container-filter-gen {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 10px;
+  }
+
+  .box-filter-gen {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
 }
 </style>

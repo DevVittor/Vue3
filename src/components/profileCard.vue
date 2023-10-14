@@ -94,7 +94,7 @@ const Foto = ref([
 @media screen and (max-width: 640px) {
 
     .card-profile {
-        height: 650px;
+        height: 520px;
         width: 100%;
     }
 
