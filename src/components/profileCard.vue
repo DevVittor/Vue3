@@ -1,119 +1,106 @@
 <script setup>
+import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+const Foto = ref([
+    "https://images.pexels.com/photos/17327539/pexels-photo-17327539/free-photo-of-boutique-butique-negocio-empresa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1,",
+    "https://images.pexels.com/photos/8306363/pexels-photo-8306363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/11942868/pexels-photo-11942868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/3194076/pexels-photo-3194076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2014875/pexels-photo-2014875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/12811157/pexels-photo-12811157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/11741234/pexels-photo-11741234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/8258910/pexels-photo-8258910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/14354554/pexels-photo-14354554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/17327539/pexels-photo-17327539/free-photo-of-boutique-butique-negocio-empresa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1,",
+    "https://images.pexels.com/photos/8306363/pexels-photo-8306363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/11942868/pexels-photo-11942868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/3194076/pexels-photo-3194076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2014875/pexels-photo-2014875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/12811157/pexels-photo-12811157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/11741234/pexels-photo-11741234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/8258910/pexels-photo-8258910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/14354554/pexels-photo-14354554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/17327539/pexels-photo-17327539/free-photo-of-boutique-butique-negocio-empresa.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1,",
+    "https://images.pexels.com/photos/8306363/pexels-photo-8306363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/11942868/pexels-photo-11942868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/3194076/pexels-photo-3194076.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2180858/pexels-photo-2180858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/2014875/pexels-photo-2014875.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/12811157/pexels-photo-12811157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/11741234/pexels-photo-11741234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/8258910/pexels-photo-8258910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/14354554/pexels-photo-14354554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+]);
+
 </script>
 <template>
-    <RouterLink to="/2">
-        <div class="card-profile">
-            <div class="box-img">
-                <img class="" loading="lazy"
-                    src="https://images.pexels.com/photos/15326936/pexels-photo-15326936/free-photo-of-sutia-inclinando-apoiando-lingerie.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                    alt="" />
-            </div>
-            <div class="container-info-profile">
-                <div class="bar-profile">
-                    <div class="">
-                        <span class="font-medium">R$ 450/H</span>
-                    </div>
-                    <div class="boost-profile">
-                        <div class="">
-                            <i class="text-blue-500 text-[20px] ri-verified-badge-fill"></i>
-                        </div>
-                        <div class="">
-                            <i class="text-[20px] text-red-500 ri-flashlight-fill"></i>
-                        </div>
-                        <div>
-                            <i class="text-[20px] text-green-500 ri-shield-check-fill"></i>
-                        </div>
-                        <div>
-                            <i class="text-[20px] ri-women-line"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-info-profile">
-                    <div>
-                        <h2 class="text-white font-semibold">Jéssica Gomes</h2>
-                    </div>
-                    <div class="">
-                        <button href="/2"
-                            class="bg-black text-white font-semibold text-[17px] pr-[10px] pl-[10px] pt-[3px] pb-[3px] rounded-[3px]"><i
-                                class="pr-1.5 ri-eye-line"></i>Acessar</button>
-                    </div>
-                </div>
-            </div>
+    <div class="container-profile">
+        <div class="card-profile" v-for="(link, index) in Foto" :key="index">
+            <RouterLink to="/2">
+                <img class="" loading="lazy" :src="link" :alt="`Imagem ${index + 1}`" />
+            </RouterLink>
         </div>
-    </RouterLink>
+    </div>
 </template>
 <style scoped>
-.card-profile {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.container-profile {
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    border-radius: 12px;
-    width: 250px;
-}
-
-.box-img {
-    display: flex;
-    break-inside: avoid;
-    height: 430px;
-    width: 250px;
-    justify-content: flex-center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 12px;
-}
-
-.box-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 3px;
-    pointer-events: none;
-}
-
-.container-info-profile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    height: 430px;
-    width: 250px;
-
-}
-
-.bar-profile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 30px;
-    padding-right: 10px;
-    padding-left: 10px;
-    height: 35px;
-    margin: 10px;
-    background: white;
-    border-radius: 3px;
-}
-
-.boost-profile {
-    display: flex;
-    align-items: center;
+    padding: 5px;
+    width: 100%;
     gap: 5px;
 }
 
-.box-info-profile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    backdrop-filter: blur(15px);
-    height: auto;
-    width: 100%;
-    gap: 3px;
-    padding: 8px 5px;
-    border-radius: 0px 0px 3px 3px;
+.card-profile img {
+    height: 430px;
+    width: 255px;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+@media screen and (max-width: 990px) {
+    .card-profile {
+        height: 400px;
+        width: 242px;
+    }
+
+    .card-profile img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .card-profile {
+        height: 450px;
+        width: 300px;
+    }
+
+    .card-profile img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .card-profile {
+        height: 650px;
+        width: 100%;
+    }
+
+    .card-profile img {
+        height: 100%;
+        width: 100%;
+    }
 }
 </style>

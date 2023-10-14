@@ -75,21 +75,6 @@ function clicouBtn() {
   <section>
     <div class="container-card-profile">
       <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
-      <profileCard />
     </div>
   </section>
 </template>
@@ -127,13 +112,12 @@ function clicouBtn() {
 }
 
 .container-card-profile {
-  columns: 8;
+  height: auto;
+  width: auto;
   gap: 5px;
-  width: 100%;
   padding-top: 0;
   padding-bottom: 5px;
   padding-right: 5px;
   padding-left: 5px;
-  background: red;
 }
 </style>
