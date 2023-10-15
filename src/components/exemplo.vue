@@ -100,8 +100,15 @@ onMounted(() => {
     gap: 10px;
     height: 100%;
     width: 30%;
-    padding: 5px 10px;
+    padding: 5px;
     border-right: 1px solid #ddd;
+}
+
+.box-info-profile {
+    background: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
 }
 
 .box-info-profile ul {
@@ -109,11 +116,9 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
-    background: black;
+    gap: 5px;
     color: white;
     border-radius: 5px;
-    padding: 3px 10px;
 }
 
 .box-info-profile li {
@@ -299,6 +304,7 @@ onMounted(() => {
     .container-profile {
         height: auto;
         flex-wrap: wrap;
+        flex-direction: column-reverse;
         width: 100%;
     }
 
