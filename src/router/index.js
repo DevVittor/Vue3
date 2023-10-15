@@ -53,6 +53,11 @@ const router = createRouter({
             name: "Error",
             component: () => import("../components/Error404.vue"),
         },
+        {
+            path:"/register",
+            name:"Register",
+            component:()=>import('../pages/Register.vue')
+        }
         
     ],
     scrollBehavior(to, from, savedPosition) {

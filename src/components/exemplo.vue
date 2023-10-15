@@ -1,7 +1,8 @@
 <script setup>
 import Services from './Services.vue';
 import imageSlider from './sliderImage.vue';
-import { ref, onMounted } from 'vue';
+
+/*import { ref, onMounted } from 'vue';
 
 const alturaDaPagina = ref(window.innerHeight - 126 + "px");
 
@@ -10,7 +11,7 @@ onMounted(() => {
     window.addEventListener("resize", () => {
         alturaDaPagina.value = window.innerHeight - 126 + "px";
     });
-});
+});*/
 
 </script>
 <template>
