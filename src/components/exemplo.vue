@@ -75,8 +75,8 @@ onMounted(() => {
                 <Services />
                 <div class="box-image-profile">
                     <imageSlider />
-                    <button><i class="ri-play-circle-line"></i>Assistir o Vídeo</button>
                 </div>
+                <button><i class="ri-play-circle-line"></i>Assistir o Vídeo</button>
                 <Services />
             </div>
         </div>
@@ -270,7 +270,6 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
     height: auto;
     width: 100%;
     max-height: 600px;
@@ -284,7 +283,7 @@ onMounted(() => {
     object-fit: contain;
 }
 
-.box-image-profile button {
+.container-image-profile button {
     background: black;
     color: white;
     font-weight: 600;
@@ -334,10 +333,14 @@ onMounted(() => {
     }
 
     .box-image-profile {
-        gap: 10px;
         padding: 5px;
+        max-height: 350px;
         min-width: 100%;
     }
 
+    .box-image-profile img {
+        height: 300px;
+        width: 100%;
+    }
 }
 </style>

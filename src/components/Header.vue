@@ -36,9 +36,8 @@ header {
 
 .container-menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   padding: 10px 50px;
   width: 100%;
 }
