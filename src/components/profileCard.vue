@@ -41,7 +41,7 @@ const Foto = ref([
 <template>
     <div class="container-profile">
         <div class="card-profile" v-for="(link, index) in Foto" :key="index">
-            <RouterLink to="/2">
+            <RouterLink to="/profile/2">
                 <img class="" loading="lazy" :src="link" :alt="`Imagem ${index + 1}`" />
             </RouterLink>
         </div>

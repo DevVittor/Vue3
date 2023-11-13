@@ -1,13 +1,46 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createWebHistory, createRouter } from "vue-router";
 
+const routes = [
+    {
+        name: "Home",
+        path: "/",
+        component: () => import("../pages/Home.vue"),
+    },
+    {
+        name: "Profile",
+        path: "/profile/:id",
+        component: () => import("../pages/exemplo.vue"),
+    },
+    {
+        name: "Cadastrar",
+        path: "/cadastrar",
+        component: () => import("../pages/Cadastrar.vue"),
+    },
+    {
+        name: "Acessar",
+        path: "/acessar",
+        component: () => import("../pages/Acessar.vue"),
+    }, {
+        name: "Error404",
+        path: "/:pathMatch(.*)*",
+        component: () => import("../pages/Error404.vue"),
+    }
+];
 const router = createRouter({
+    history: createWebHistory(),
+    routes
+
+});
+
+export default router;
+/*const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: "/",
             name: "Inicio",
+            path: "/",
             component: () => import("../pages/Home.vue"),
-            /*beforeEnter: (to, from, next) => {
+            beforeEnter: (to, from, next) => {
                 const token = localStorage.getItem("Token");
                 if (token) {
                     // O token existe, permita o acesso à rota protegida
@@ -16,21 +49,21 @@ const router = createRouter({
                     // O token não existe, redirecione para a página de login
                     next("/acessar"); // Ou qualquer outra rota de login
                 }
-            },*/
+            },
         },
         {
-            path: "/:id",
             name: "Profile",
+            path: "/:id",
             component: () => import("../components/exemplo.vue"),
         },
         {
-            path: "/perfil",
             name: "perfil",
+            path: "/perfil",
             component: () => import("../components/Profile.vue"),
         },
         {
-            path: "/exprofile",
             name: "exProfile",
+            path: "/exprofile",
             component: () => import("../components/exemplo.vue"),
         },
         {
@@ -39,30 +72,35 @@ const router = createRouter({
             component: () => import("../pages/Cadastrar.vue"),
         },
         {
-            path: "/acessar",
             name: "Acessar",
+            path: "/acessar",
             component: () => import("../pages/Acessar.vue"),
         },
         {
-            path: "/model",
             name: "Model",
+            path: "/model",
             component: () => import("../pages/Model.vue"),
         },
         {
-            path: "/:pathMatch(.*)*",
+            name: "Envio",
+            path: "/envio",
+            component: () => import("../pages/Envio.vue"),
+        },
+        {
             name: "Error",
+            path: "/:pathMatch(.*)*",
             component: () => import("../components/Error404.vue"),
         },
         {
-            path:"/register",
-            name:"Register",
-            component:()=>import('../pages/Register.vue')
+            name: "Register",
+            path: "/register",
+            component: () => import('../pages/Register.vue')
         }
-        
+
     ],
     scrollBehavior(to, from, savedPosition) {
         return { top: 0 };
     },
 });
 
-export default router;
+export default router;*/

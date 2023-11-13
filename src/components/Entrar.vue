@@ -25,7 +25,7 @@ function checarDados(event) {
             let token = res.data.token;
             localStorage.setItem("Token", token);
         }).catch(error => {
-            console.log(`Login Inválido por causa do error ${error}`)
+            console.log(`Login Inválido por causa do error ${error}`);
         });
 }
 </script>

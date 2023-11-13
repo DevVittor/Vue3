@@ -9,3 +9,4 @@ import FooterComp from "./components/Footer.vue";
   <RouterView />
   <FooterComp />
 </template>
+<style scoped></style>

@@ -1,7 +1,7 @@
 <script setup>
-import Services from './Services.vue';
-import imageSlider from './sliderImage.vue';
-
+import Services from '../components/Services.vue';
+import imageSlider from '../components/sliderImage.vue';
+document.title = "Profile";
 /*import { ref, onMounted } from 'vue';
 
 const alturaDaPagina = ref(window.innerHeight - 126 + "px");
