@@ -5,6 +5,16 @@ const routes = [
         name: "Home",
         path: "/",
         component: () => import("../pages/Home.vue"),
+        beforeEnter: (to, from, next) => {
+            const token = localStorage.getItem("Token");
+            if (token) {
+                // O token existe, permita o acesso à rota protegida
+                next();
+            } else {
+                // O token não existe, redirecione para a página de login
+                next("/restrita"); // Ou qualquer outra rota de login
+            }
+        },
     },
     {
         name: "Profile",
@@ -20,7 +30,13 @@ const routes = [
         name: "Acessar",
         path: "/acessar",
         component: () => import("../pages/Acessar.vue"),
-    }, {
+    },
+    {
+        name: "Restrita",
+        path: "/restrita",
+        component: () => import("../pages/Restrita.vue")
+    },
+    {
         name: "Error404",
         path: "/:pathMatch(.*)*",
         component: () => import("../pages/Error404.vue"),
@@ -29,7 +45,6 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes
-
 });
 
 export default router;

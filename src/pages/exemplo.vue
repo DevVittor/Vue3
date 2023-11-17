@@ -206,6 +206,7 @@ onMounted(() => {
 
 .container-description p {
     text-align: center;
+    text-wrap: pretty;
 }
 
 .container-price {
